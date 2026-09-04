@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-04T10:12:03+08:00",
+  "title": "Design System: 章思哲个人博客",
+  "extensions": {
+    "colorMeta": {
+      "primary-teal": {
+        "role": "primary",
+        "displayName": "深青绿",
+        "canonical": "#227a73",
+        "tonalRamp": ["#0c2422", "#123d39", "#185650", "#227a73", "#4b958f", "#7bb2ad", "#afd1cd", "#e5f1ef"]
+      },
+      "secondary-red": {
+        "role": "secondary",
+        "displayName": "氧化红",
+        "canonical": "#af3029",
+        "tonalRamp": ["#34110f", "#571a17", "#7a231f", "#af3029", "#c65d57", "#da8b86", "#eabbb7", "#f8e9e7"]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "暖纸",
+        "canonical": "#fffcf0",
+        "tonalRamp": ["#28271f", "#464438", "#656154", "#858073", "#a6a092", "#c7c1b4", "#e5dfd2", "#fffcf0"]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "深墨",
+        "canonical": "#1c1b1a",
+        "tonalRamp": ["#1c1b1a", "#343230", "#504d49", "#706c66", "#928d85", "#b5afa5", "#d8d2c6", "#f5f1e7"]
+      },
+      "muted-ink": {
+        "role": "neutral",
+        "displayName": "风化灰墨",
+        "canonical": "#6f6b62",
+        "tonalRamp": ["#25231f", "#3b3933", "#535049", "#6f6b62", "#908b81", "#b2aca1", "#d4cec2", "#f1ede3"]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "发丝灰",
+        "canonical": "#dad6cc",
+        "tonalRamp": ["#2b2925", "#48453f", "#66625a", "#858078", "#a6a198", "#c7c2b8", "#dad6cc", "#f5f1e8"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "首页问候", "purpose": "仅用于首屏作者问候。" },
+      "headline": { "displayName": "文章主标题", "purpose": "长文开始处的最高阅读层级。" },
+      "title": { "displayName": "文章列表标题", "purpose": "文章入口的主要扫描目标。" },
+      "body": { "displayName": "正文", "purpose": "导航、说明、摘要和正文内容。" },
+      "label": { "displayName": "编辑标签", "purpose": "文章类别和日期组合。" }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "reveal-up", "value": "520ms cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "首屏内容轻微上移淡入。" },
+      { "name": "state-color", "value": "180ms ease", "purpose": "导航和联系链接的颜色状态。" },
+      { "name": "title-underline", "value": "220ms ease", "purpose": "文章标题下划线从左展开。" },
+      { "name": "magnet-enter", "value": "180ms ease-out", "purpose": "桌面指针靠近阅读动作时的轻微跟随。" },
+      { "name": "magnet-return", "value": "420ms ease-in-out", "purpose": "阅读动作平稳回到原位。" }
+    ],
+    "breakpoints": [
+      { "name": "stack", "value": "760px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Author Wordmark",
+      "kind": "nav",
+      "refersTo": "navigation-link",
+      "description": "页眉中的作者名称与氧化红身份方点。",
+      "html": "<a class=\"ds-wordmark\" href=\"#top\"><span class=\"ds-wordmark-dot\"></span><span>章思哲</span></a>",
+      "css": ".ds-wordmark { display:inline-flex; align-items:center; gap:.9rem; min-height:44px; color:var(--ink,#1c1b1a); font-family:\"Noto Sans SC\",\"Microsoft YaHei\",\"PingFang SC\",system-ui,sans-serif; font-size:1.4rem; font-weight:700; letter-spacing:-.045em; text-decoration:none; } .ds-wordmark-dot { width:.68rem; height:.68rem; background:var(--red,#af3029); } .ds-wordmark:focus-visible { outline:3px solid color-mix(in srgb,var(--teal,#227a73) 55%,transparent); outline-offset:5px; }"
+    },
+    {
+      "name": "Navigation Link",
+      "kind": "nav",
+      "refersTo": "navigation-link",
+      "description": "低噪声页眉链接；当前项由深青绿线定位。",
+      "html": "<a class=\"ds-nav-link ds-nav-link-active\" href=\"#writing\">文章</a>",
+      "css": ".ds-nav-link { position:relative; display:inline-flex; align-items:center; min-height:44px; color:#363330; font-family:\"Noto Sans SC\",\"Microsoft YaHei\",\"PingFang SC\",system-ui,sans-serif; font-size:1rem; text-decoration:none; transition:color 180ms ease; } .ds-nav-link:hover { color:var(--red,#af3029); } .ds-nav-link-active::after { content:\"\"; position:absolute; left:0; right:0; bottom:-1rem; height:3px; background:var(--teal,#227a73); } .ds-nav-link:focus-visible { outline:3px solid color-mix(in srgb,var(--teal,#227a73) 55%,transparent); outline-offset:5px; }"
+    },
+    {
+      "name": "Article Row",
+      "kind": "card",
+      "refersTo": "article-row",
+      "description": "无卡片容器的排版式最新文章入口。",
+      "html": "<article class=\"ds-article-row\"><time>2026.09.03</time><div><p class=\"ds-category\">随笔</p><h3><a href=\"#\">从这里开始</a></h3><p class=\"ds-excerpt\">欢迎来到我的个人博客。这里将收录学习笔记、项目复盘，以及那些值得反复琢磨的问题。</p></div></article>",
+      "css": ".ds-article-row { display:grid; grid-template-columns:8rem minmax(0,1fr); gap:2rem; align-items:start; padding:2.7rem 0; border-top:1px solid var(--rule,#dad6cc); border-bottom:1px solid var(--rule,#dad6cc); background:var(--paper,#fffcf0); color:var(--ink,#1c1b1a); font-family:\"Noto Sans SC\",\"Microsoft YaHei\",\"PingFang SC\",system-ui,sans-serif; } .ds-article-row time,.ds-excerpt { color:var(--muted,#6f6b62); } .ds-category { margin:0 0 .6rem; color:var(--red,#af3029); font-weight:650; } .ds-article-row h3 { margin:0; font-size:2.25rem; line-height:1.15; letter-spacing:-.05em; } .ds-article-row h3 a { color:inherit; text-decoration:none; } .ds-article-row h3 a:hover,.ds-article-row h3 a:focus-visible { text-decoration:underline; text-decoration-color:var(--teal,#227a73); text-underline-offset:.2em; } .ds-excerpt { margin:.9rem 0 0; line-height:1.65; }"
+    },
+    {
+      "name": "Article Action",
+      "kind": "button",
+      "refersTo": "article-action",
+      "description": "文章列表中唯一的主动作，像编辑标注而不是填色按钮。",
+      "html": "<a class=\"ds-article-action\" href=\"#\">阅读文章 <svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-article-action { display:inline-flex; align-items:center; gap:1rem; min-height:48px; color:var(--teal,#227a73); font-family:\"Noto Sans SC\",\"Microsoft YaHei\",\"PingFang SC\",system-ui,sans-serif; font-size:1.05rem; font-weight:650; border-bottom:2px solid currentColor; text-decoration:none; transition:color 180ms ease,transform 180ms ease-out; } .ds-article-action:hover { color:var(--red,#af3029); transform:translateY(-1px); } .ds-article-action:active { transform:translateY(0); } .ds-article-action:focus-visible { outline:3px solid color-mix(in srgb,var(--teal,#227a73) 55%,transparent); outline-offset:5px; }"
+    },
+    {
+      "name": "Editorial Quote",
+      "kind": "custom",
+      "description": "长文中的无容器引用，以单个中文开引号建立层级。",
+      "html": "<blockquote class=\"ds-quote\">先把事情做出来，再把为什么写清楚。</blockquote>",
+      "css": ".ds-quote { position:relative; margin:2.8rem 0; padding:.35rem 0 .35rem 2.8rem; color:var(--muted,#6f6b62); font-family:\"Noto Sans SC\",\"Microsoft YaHei\",\"PingFang SC\",system-ui,sans-serif; font-size:1.4rem; line-height:1.65; } .ds-quote::before { content:\"“\"; position:absolute; top:-.25rem; left:0; color:var(--teal,#227a73); font-size:3.4rem; font-weight:650; line-height:1; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "公开学习札记",
+    "overview": "这是一个安静、诚实的个人出版空间：访客先认识章思哲，再顺着清晰的文章入口开始阅读。视觉像一张被认真排版的暖色数字纸张，用排版、留白和细线建立秩序，不用口号式英雄区、卡片墙或装饰性隐喻争夺注意力。\n\n系统保持适度的编辑感，但中文可读性优先。深墨承担内容，深青绿指向可行动与当前状态，氧化红只做类别和身份标记；真实头像是唯一主要图像。",
+    "keyCharacteristics": [
+      "暖纸底色与深墨文字贯穿整页。",
+      "单一中文无衬线字体栈，靠字号、字重与留白建立层级。",
+      "发丝细分隔线、直角轮廓和排版式文章行取代卡片。",
+      "氧化红与深青绿稀疏出现，各自承担明确语义。",
+      "动效轻、短且可关闭，不改变内容阅读顺序。"
+    ],
+    "rules": [
+      { "name": "The Two-Ink Rule", "body": "深青绿只表示阅读路径或当前状态，氧化红只表示身份与编辑标签；两者都不铺成大面积背景。", "section": "colors" },
+      { "name": "The One-Paper Rule", "body": "页面保持一张连续暖纸，不用白色卡片或交替色块切碎阅读流。", "section": "colors" },
+      { "name": "The One-Family Rule", "body": "不引入展示性衬线体、等宽体或手写体；层级只通过同一中文无衬线家族的尺度、字重、行距与颜色建立。", "section": "typography" },
+      { "name": "The Reading-First Grid Rule", "body": "每个区块都必须沿 DOM 阅读顺序自然成立；网格只增强层级，不能依赖视觉换序解释内容。", "section": "layout" },
+      { "name": "The Flat-by-Default Rule", "body": "不为导航、文章入口、联系方式或正文添加阴影、玻璃模糊与浮层质感。", "section": "elevation" }
+    ],
+    "dos": [
+      "Do 先呈现真实作者身份，再给出首屏可见的文章入口。",
+      "Do 把暖纸、深墨、发丝线和大量留白当作主要视觉材料。",
+      "Do 保持每个强调色的语义稳定，并为键盘、触摸与减少动态场景提供完整体验。",
+      "Do 只展示真实文章、头像、联系方式和可验证内容。"
+    ],
+    "donts": [
+      "Don't 使用卡片墙、渐变、玻璃拟态、投影、圆角容器或大面积强调色。",
+      "Don't 使用口号式全屏英雄区、胶片隐喻、复古胶片配色或装饰性视觉叙事。",
+      "Don't 混用多套字体、把中文压得过紧，或让装饰阻挡文章阅读入口。",
+      "Don't 伪造项目、履历、统计数字、推荐语或更多文章来填满版面。"
+    ]
+  }
+}

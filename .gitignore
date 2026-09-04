@@ -37,3 +37,12 @@ next-env.d.ts
 /outputs/
 /work/
 /.tools/
+
+# local design review artifacts
+/.impeccable/build/
+/.impeccable/review/
+/.impeccable/mocks/home-a-approved.json
+/.impeccable/mocks/home-b-*
+/.impeccable/mocks/home-c-*
+/assets/
+/design-system/
