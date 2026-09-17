@@ -5,18 +5,18 @@
 ## 本地运行
 
 ```bash
-python -m http.server 4173 --directory site
+python -m http.server 4173
 ```
 
-然后访问 `http://127.0.0.1:4173/`。也可以直接打开 `site/index.html` 浏览静态内容。
+然后访问 `http://127.0.0.1:4173/`。也可以直接打开根目录的 `index.html` 浏览静态内容。
 
 ## 发布
 
-推送到 `main` 分支后，GitHub Actions 会直接发布 `site/` 到 GitHub Pages，无需构建步骤。
+推送到 `main` 分支后，GitHub Actions 会整理根目录静态文件并发布到 GitHub Pages。根目录也可直接兼容 GitHub Pages 的分支发布模式。
 
 主要文件：
 
-- `site/index.html`：页面结构与内容
-- `site/style.css`：视觉系统与响应式布局
-- `site/script.js`：文章卡组、详情展开与导航状态
+- `index.html`：页面结构与内容
+- `style.css`：视觉系统与响应式布局
+- `script.js`：文章卡组、详情展开与导航状态
 - `DESIGN.md`：设计系统与后续迭代约束

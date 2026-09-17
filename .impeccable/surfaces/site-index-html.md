@@ -1,8 +1,8 @@
 ---
 version: 1
-slug: "site-index-html"
-primary_target: "site/index.html"
-related_targets: ["site/style.css","site/script.js"]
+slug: "index-html"
+primary_target: "index.html"
+related_targets: ["style.css","script.js"]
 ---
 
 THESIS: Treat every post as a numbered personal publication; refuse the centered-avatar-plus-card portfolio default.

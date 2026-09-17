@@ -2,7 +2,7 @@
 
 ## Self-hosted fonts
 
-The deployed static site includes League Gothic and Noto Sans SC from the Google Fonts repository. Each font is distributed under the SIL Open Font License 1.1; the corresponding license text is included beside the font files under `site/assets/fonts/`.
+The deployed static site includes League Gothic and Noto Sans SC from the Google Fonts repository. Each font is distributed under the SIL Open Font License 1.1; the corresponding license text is included beside the font files under `assets/fonts/`.
 
 Sources:
 

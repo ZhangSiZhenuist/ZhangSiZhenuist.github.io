@@ -24,13 +24,17 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
-      - name: Disable Jekyll
-        run: touch site/.nojekyll
+      - name: Prepare static site
+        run: |
+          mkdir _site
+          cp index.html style.css script.js favicon.svg _site/
+          cp -R assets _site/assets
+          touch _site/.nojekyll
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: site
+          path: _site
 
   deploy:
     environment:
