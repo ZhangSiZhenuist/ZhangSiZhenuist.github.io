@@ -1,54 +1,45 @@
+# build output
+dist/
+
+# generated types
+.astro/
+
 # dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
+node_modules/
+.pnpm-store/
 
-# testing
-/coverage
-
-# next.js
-/.next/
-/.vinext/
-/out/
-
-# misc
-.DS_Store
-*.pem
-
-# debug
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
+pnpm-debug.log*
 
-# local environment
-.env*
+# environment variables
+.env
+.env.production
 
-# deployment and generated files
-.vercel
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/
+
+# pagefind
+
+public/pagefind
+
+# local template research and generated previews
+.template-source/
+.impeccable/archive/
+.impeccable/build/
+.impeccable/edge-*/
+.impeccable/mocks/
+.impeccable/questions/
+.impeccable/reference/
+.impeccable/review/
+.next/
+.tools/
+.vinext/
+.wrangler/
+design-system/
 next-env.d.ts
-/dist/
-/.wrangler/
-/outputs/
-/work/
-/.tools/
-
-# local design review artifacts
-/.impeccable/build/
-/.impeccable/review/
-/.impeccable/edge-*/
-/.impeccable/archive/
-/.impeccable/questions/
-/.impeccable/reference/
-/.impeccable/mocks/decision-v2/
-/.impeccable/mocks/factory-b-*
-/.impeccable/mocks/factory-c-*
-/.impeccable/mocks/home-a-approved.json
-/.impeccable/mocks/home-b-*
-/.impeccable/mocks/home-c-*
-/design-system/

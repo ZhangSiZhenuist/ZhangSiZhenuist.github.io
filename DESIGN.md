@@ -1,274 +1,213 @@
 ---
-name: "章思哲个人博客：编号出版目录"
-description: "以哑黑画布、暖白文字、钴蓝与酸性青柠信号构成的编号个人出版目录。"
+name: "章思哲个人博客：AstroPaper v5.5.1"
+description: "直接复用 AstroPaper v5.5.1 的居中等宽双主题阅读系统。"
 colors:
-  signal-blue: "#3869f8"
-  signal-lime: "#d9ff43"
-  signal-lime-pressed: "#b9de2e"
-  matte-black: "#090909"
-  warm-white: "#f8f7ec"
-  muted-silver: "#a8aaad"
-  dim-silver: "#85898e"
-  hairline: "#34383b"
-  card-stroke: "#474b4e"
+  light-background: "#fdfdfd"
+  light-foreground: "#282728"
+  light-accent: "#006cac"
+  light-muted: "#e6e6e6"
+  light-border: "#ece9e9"
+  dark-background: "#212737"
+  dark-foreground: "#eaedf3"
+  dark-accent: "#ff6b01"
+  dark-muted: "#343f60"
+  dark-border: "#ab4b08"
 typography:
-  catalog-number:
-    fontFamily: '"Noto Sans SC Local", sans-serif'
-    fontSize: "clamp(11rem, 14vw, 13.4rem)"
-    fontWeight: 900
-    lineHeight: 0.72
-    letterSpacing: "-0.06em"
   display:
-    fontFamily: '"Noto Sans SC Local", "Microsoft YaHei", sans-serif'
-    fontSize: "clamp(4rem, 7.3vw, 7rem)"
-    fontWeight: 850
-    lineHeight: 1.02
-    letterSpacing: "-0.04em"
+    fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
+    fontSize: "3rem"
+    fontWeight: 700
+    lineHeight: 1
   headline:
-    fontFamily: '"Noto Sans SC Local", "Microsoft YaHei", sans-serif'
-    fontSize: "clamp(3.6rem, 7vw, 6rem)"
-    fontWeight: 850
-    lineHeight: 0.98
-    letterSpacing: "-0.04em"
-  card-title:
-    fontFamily: '"Noto Sans SC Local", "Microsoft YaHei", sans-serif'
-    fontSize: "clamp(3rem, 5.4vw, 5.6rem)"
-    fontWeight: 850
-    lineHeight: 1.04
-    letterSpacing: "-0.04em"
+    fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
+    fontSize: "1.875rem"
+    fontWeight: 600
+    lineHeight: "2.25rem"
+  title:
+    fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
+    fontSize: "1.125rem"
+    fontWeight: 500
+    lineHeight: "1.75rem"
   body:
-    fontFamily: '"Noto Sans SC Local", "Microsoft YaHei", sans-serif'
+    fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
     fontSize: "1rem"
     fontWeight: 400
-    lineHeight: 1.65
-  post-body:
-    fontFamily: '"Noto Sans SC Local", "Microsoft YaHei", sans-serif'
-    fontSize: "1.08rem"
+    lineHeight: "1.5rem"
+  label:
+    fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
+    fontSize: "0.875rem"
     fontWeight: 400
-    lineHeight: 2
-  catalog-label:
-    fontFamily: '"League Gothic Local", "Noto Sans SC Local", sans-serif'
-    fontSize: "0.9rem"
-    fontWeight: 400
-    lineHeight: 1.7
-    letterSpacing: "0.14em"
-  action:
-    fontFamily: '"Noto Sans SC Local", "Microsoft YaHei", sans-serif'
-    fontSize: "1rem"
-    fontWeight: 750
-    lineHeight: 1.65
+    lineHeight: "1.25rem"
 rounded:
-  square: "0px"
+  inline: "0.25rem"
+  control: "0.375rem"
+  round: "9999px"
 spacing:
-  screen-edge: "4.1vw"
-  deck-gap: "1.25rem"
-  heading-gap: "4rem"
-  card-inset: "clamp(1.4rem, 4vw, 4rem)"
-  section-block: "clamp(6rem, 10vw, 10rem)"
-components:
-  primary-action:
-    backgroundColor: "{colors.signal-blue}"
-    textColor: "{colors.matte-black}"
-    typography: "{typography.action}"
-    rounded: "{rounded.square}"
-    padding: "0 1.7rem"
-    height: "4rem"
-  primary-action-hover:
-    backgroundColor: "{colors.signal-lime}"
-    textColor: "{colors.matte-black}"
-  primary-action-active:
-    backgroundColor: "{colors.signal-lime-pressed}"
-    textColor: "{colors.matte-black}"
-  article-card:
-    backgroundColor: "{colors.matte-black}"
-    textColor: "{colors.warm-white}"
-    rounded: "{rounded.square}"
-    width: "min(71vw, 68rem)"
-  deck-control:
-    backgroundColor: "{colors.matte-black}"
-    textColor: "{colors.warm-white}"
-    rounded: "{rounded.square}"
-    size: "4.25rem"
+  page-inset: "1rem"
+  item-block: "1.5rem"
+  section-block: "3rem"
+  compact-gap: "0.25rem"
 ---
 
 # Design System: 章思哲个人博客
 
 ## Overview
 
-**Creative North Star: “编号出版目录 / Numbered Publishing Catalog”**
+**Creative North Star: “AstroPaper 阅读栏 / The AstroPaper Reading Rail”**
 
-这是一个把每篇文章当作独立编号出版物的个人博客。它以目录、档案编号、状态标签和信号波形组织信息：访客先在首屏识别作者与 CATALOG 001，再直接进入真实文章，而不是经过居中头像、履历卡片或泛化作品集介绍。
+当前站点不是旧版“编号出版目录”的延续，而是对开源主题 [AstroPaper v5.5.1](https://github.com/satnaing/astro-paper/tree/v5.5.1) 的直接复用与中文化适配。界面与主要交互来自 Sat Naing 及贡献者维护的 AstroPaper，按 MIT License 使用；版本与来源同时记录在 `package.json`、`README.md` 和 `THIRD_PARTY_NOTICES.md`。新增页面与组件应优先沿用上游 AstroPaper 的既有模式，避免重新发明一套品牌视觉。
 
-视觉气质冷静、技术化、强对比。哑黑背景像设备面板，暖白大字承担叙事，钴蓝与酸性青柠分别标记主路径和高反馈状态；超大编号、细线网格、压缩英文标签、方形按钮与横向卡组共同构成可扩展的出版目录语言。
+视觉核心是一条克制、居中的等宽阅读栏：接近纸白或蓝黑的连续页面底色，单一主题强调色，细分隔线，以及不加容器装饰的文章条目。桌面预览中，导航、首屏、文章列表与页脚共享同一条 48rem 栏宽和同一左边线，页面靠排版、间距与颜色建立层级，而不是靠海报式大图、营销卡片或装饰背景。
 
 **Key Characteristics:**
 
-- 每篇内容必须拥有连续的三位目录编号，如 `001`、`002`。
-- 哑黑连续画布上使用暖白大标题、银灰辅助信息和 1px 结构线。
-- 钴蓝是默认操作信号，酸性青柠用于悬浮、焦点、选区和正文链接。
-- 超大编号与中文粗体标题使用 Noto Sans SC Local；窄体元数据使用 League Gothic Local。
-- 信号波形是唯一主要抽象图像，并与文章编号一同出现。
-- 所有交互保持直角、机械、可键盘访问，并尊重减少动态偏好。
+- AstroPaper v5.5.1 原生结构、图标与交互是当前视觉权威。
+- 全站使用系统等宽字体，中文、英文、数字和代码保持一致的技术写作气质。
+- 浅色主题使用蓝色强调，深色主题使用橙色强调；两套主题各自拥有背景、前景、弱化面和边框 token。
+- 桌面采用 `max-w-3xl` 的居中单栏；页面主体不扩展为全宽杂志布局。
+- 文章入口是无卡片底色、无阴影的列表项，标题、日期和摘要顺序清晰。
+- 虚线下划线、波浪活动态和线性图标构成轻量交互语言。
 
 ## Colors
 
-配色来自暗色设备界面与印刷校样标记：大面积保持近黑与暖白，两个高饱和信号色只负责路径和反馈。
+色彩按语义成对切换：背景、前景、强调、弱化面和边框在浅色与深色主题中保持相同职责，不混用两套强调色。
 
 ### Primary
 
-- **钴蓝信号**（`#3869f8`）：主阅读按钮、当前导航下划线、文章状态点、目录进度和文章元数据；它代表默认可行动路径。
-
-### Secondary
-
-- **酸性青柠**（`#d9ff43`）：主按钮悬浮、键盘焦点、文本选区、正文链接和激活后的目录进度；它代表即时反馈，而不是静态装饰。
-- **按压青柠**（`#b9de2e`）：主操作按下时的唯一暗化状态。
+- **浅色蓝强调**（`light-accent`）：浅色主题中的文章标题、RSS 图标、悬浮链接、列表标记、焦点轮廓和阅读进度。
+- **深色橙强调**（`dark-accent`）：深色主题中承担完全相同的行动与状态职责。
 
 ### Neutral
 
-- **哑黑**（`#090909`）：页面和文章卡片的连续底色。
-- **暖白**（`#f8f7ec`）：主标题、关键文本和反转控制内容。
-- **静音银**（`#a8aaad`）：日期、导航默认态、页脚和次级说明。
-- **暗银**（`#85898e`）：编码标签、未发布状态与低优先级文字。
-- **结构线**（`#34383b`）：分区、页脚、卡片内部和详情区的 1px 分隔。
-- **卡片描边**（`#474b4e`）：已发布与排队文章卡片的外轮廓。
+- **浅色纸面与墨色**（`light-background`、`light-foreground`）：浅色页面的连续底色和正文、标题、图标颜色。
+- **浅色弱化面与分隔线**（`light-muted`、`light-border`）：行内代码、滚动条、表格和区段边界。
+- **深色蓝黑与冷白**（`dark-background`、`dark-foreground`）：深色页面的连续底色和主要内容颜色。
+- **深色弱化面与棕橙分隔线**（`dark-muted`、`dark-border`）：深色模式中的次级表面和结构线。
 
 ### Named Rules
 
-**The Signal Hierarchy Rule.** 钴蓝表示默认路径，酸性青柠表示反馈或最高显著性；不要互换两者的角色，也不要让它们成为大面积背景。
+**The Paired Theme Rule.** 任一颜色都必须通过当前主题的语义变量使用；不要在组件中固定浅色蓝或深色橙，也不要让一个主题借用另一个主题的 token。
 
-**The Continuous Black Rule.** 页面区段与卡片保持同一哑黑底色，层级依靠描边、留白、字号与信号色建立，不使用交替背景色。
+**The Accent-as-Signal Rule.** 强调色用于链接、当前状态、焦点、代码差异与阅读进度；大面积页面仍由背景色和前景色主导。
+
+**The Continuous Canvas Rule.** 页眉、正文、文章条目和页脚共享页面底色。分区用细边框和留白表达，不增加交替色块。
 
 ## Typography
 
-**Display Font:** Noto Sans SC Local（本地可变字重，回退 Microsoft YaHei 与 sans-serif）
-**Body Font:** Noto Sans SC Local（同一字体栈）
-**Catalog Label Font:** League Gothic Local（回退 Noto Sans SC Local 与 sans-serif）
+**Display Font:** 系统等宽字体栈（`ui-monospace` 起始，回退到 SFMono-Regular、Menlo、Monaco、Consolas、Liberation Mono、Courier New 与 `monospace`）
 
-**Character:** Noto Sans SC Local 负责中文阅读与极粗显示层级，既能承载 16px 正文，也能扩展到 200px 以上的目录编号。League Gothic Local 只出现在短英文编码、状态名和档案标签中，以窄体节奏强化目录感；它不用于中文正文。
+**Body Font:** 同一系统等宽字体栈
+
+**Label/Mono Font:** 同一系统等宽字体栈
+
+**Character:** 页面通过单一等宽字体获得一致的技术记录感。没有另设中文展示字体或衬线正文字体；层级来自字号、字重、斜体、透明度和间距，长文则由 Tailwind Typography 的排版节奏组织。
 
 ### Hierarchy
 
-- **Catalog Number**（900，`clamp(11rem, 14vw, 13.4rem)`，0.72，字距 `-0.06em`）：首屏三位编号；桌面纵向放大 1.18 倍，移动端改为 `clamp(8rem, 33vw, 12rem)` 并取消变形。
-- **Display**（850，`clamp(4rem, 7.3vw, 7rem)`，1.02，字距 `-0.04em`）：首屏文章标题；桌面横向放大 1.07 倍，移动端允许自然换行。
-- **Headline**（850，`clamp(3.6rem, 7vw, 6rem)`，0.98，字距 `-0.04em`）：文章目录、关于区和正文标题；620px 以下统一为 `clamp(3rem, 15vw, 4.6rem)`。
-- **Card Title**（850，`clamp(3rem, 5.4vw, 5.6rem)`，1.04，字距 `-0.04em`）：文章卡主标题；620px 以下收敛为 `clamp(2.8rem, 13vw, 4rem)`。
-- **Body**（400，`1rem`，1.65）：导航外的大多数说明文字；页面基准字号不低于 16px。
-- **Post Body**（400，`1.08rem`，2.0）：长文正文，620px 以下回到 `1rem`，阅读宽度上限 48rem。
-- **Catalog Label**（400，约 `0.9rem`，字距 `0.10–0.14em`）：`CATALOG 001`、`TYPE`、`STATUS`、作者编码和文章结束标记；仅限短文本。
+- **Display**（700，桌面 3rem / 移动端 2.25rem，桌面行高 1）：首页“你好，我是章思哲”的唯一大标题。
+- **Headline**（页面标题通常 600，文章标题 700；桌面 1.875rem / 移动端 1.5rem）：文章列表页、关于页和文章详情页标题。
+- **Section Title**（600，1.5rem，字距略放宽）：“精选文章”“最近文章”等首页分区标题。
+- **Article Entry Title**（500，1.125rem，行高 1.75rem）：文章列表中的强调色标题链接。
+- **Body**（400，1rem，行高 1.5rem）：导航、简介、摘要、日期与页脚；长文由 `.app-prose` 继承同一字体并使用 Typography 插件的内容节奏。
+- **Label**（400，0.875rem，行高 1.25rem）：小尺寸日期、标签、复制代码控件和辅助元数据。
+- **Secondary Tone:** 面包屑、日期和图注通过 `font-light`、斜体或 75%–80% 不透明度弱化，不另增字体家族。
 
 ### Named Rules
 
-**The Two-Type Rule.** Noto Sans SC Local 承担所有中文与主要显示层级；League Gothic Local 只承担短英文目录元数据。不得引入第三种字体。
+**The One-Mono-Family Rule.** 界面文字、中文正文、元数据和代码共享系统等宽字体；只有第三方搜索结果中的嵌套提示符允许使用 `system-ui`。
 
-**The Number-before-Title Rule.** 每个出版入口先出现编号或 `CATALOG` 标签，再出现文章标题；编号是导航结构，不是装饰水印。
+**The Modest Scale Rule.** 除首页首句和 404 数字外，页面标题保持 1.5–1.875rem 的紧凑尺度。不要把文章标题扩展成占满视口的海报字。
 
 ## Layout
 
-全站采用宽屏、不对称的目录式构图。通用内容宽度为 `min(91.8vw, 92rem)`；首屏使用 `100svh` 且最小高度 48rem，桌面关键内容以约 4.1% 的左右边距绝对定位：作者导航在顶部，编号与文章标题占左侧，宽幅信号波形占右半部，联系方式和版权固定在首屏底部边线之上。
+全站的基础容器是居中的 `max-w-3xl` 阅读栏：外宽上限 48rem，宽度为 100%，左右各有 1rem 内边距。桌面实测视口约 1490px 时，外栏宽 768px、可用内容宽约 736px；页眉分隔线、主内容和页脚分隔线严格共线。正文、文章详情和关于页继续使用同一宽度，不建立额外的宽屏侧栏。
 
-文章目录使用横向可选择卡组。已发布卡宽 `min(71vw, 68rem)`，待发布卡宽 `min(28vw, 24rem)`，卡间距 1.25rem；轨道被视口裁切，通过前后按钮平移。卡片主体在桌面为文字/波形双栏，顶部存放目录号和日期，底部存放详情开关与主题编码。关于区为头像、介绍、作者编码三栏，长文区收窄至 48rem。
+首页按自然文档流垂直展开：页眉、介绍区、精选/最近文章区、全部文章入口与页脚。介绍区使用上下留白和底边框；内容分区通常以上方 3rem、下方 1.5rem 的节奏分隔。文章详情同样是单栏，标题与元数据之后进入 `.app-prose`，底部依次出现标签、返回顶部、分享和上一篇/下一篇。
 
 ### Responsive Structure
 
-- **≤980px:** 首屏从绝对定位改为五行网格，使用 1.25rem 页面内边距；页眉变为两列，隐藏状态短句、GitHub 顶部导航、主题栈和宣言栈。波形变为全宽，联系信息纵排；文章卡主体改为单列，关于区改为头像/介绍两列。
-- **≤620px:** 通用内容宽度变为 `calc(100vw - 2.5rem)`；主阅读按钮铺满容器，首屏页脚、关于区和文章页脚纵向堆叠。已发布卡占满内容宽，待发布卡保留下一张露出的预告宽度；详情元数据从三列变一列。
-- **Minimum:** 页面最小宽度 320px，任何视口不得产生意外横向滚动；卡组横移量必须与对应断点的卡宽一致。
+- **默认 / `<640px`:** 阅读栏保持满宽并保留 1rem 安全内边距。导航折叠为菜单按钮；文字链接列表默认隐藏，展开后成为 11rem 的两列网格。文章入口仍为单列；社交区、页脚版权和上一篇/下一篇纵向堆叠。首页 Display 收至 2.25rem，页面标题收至 1.5rem。
+- **`sm` / `≥640px`:** 页眉改为水平布局，站点名与文章、标签、关于、归档、搜索、主题开关同排；导航项使用紧凑横向间距。页脚改为版权与社交链接两端排列，上一篇/下一篇使用两列，日期可回到 1rem。
+- **`md` / `≥768px`:** 返回顶部控件从固定的 56px 圆形浮钮变为文内粘性紧凑控件；文章标题后的锚点默认隐藏，仅在标题悬浮或锚点聚焦时显示。
+- **Overflow:** 长链接允许断行；表格中的代码在小屏可强制断词，列表裁切横向溢出，代码块保留自身滚动与聚焦边界。
 
-**The Asymmetric Balance Rule.** 左侧用编号和标题建立重量，右侧用信号波形与小型编码栈平衡；不要把首屏重新居中成头像加简介。
-
-**The Peek-ahead Rule.** 文章卡组必须在桌面和移动端都露出下一张卡的一部分，让横向导航关系在操作前就可见。
+**The Reading Rail Rule.** 新页面的主内容默认使用同一居中 48rem 阅读栏；只有内容本身确实需要更宽的图表或媒体时，才可局部突破，而不是扩大整个站点外壳。
 
 ## Elevation & Depth
 
-系统不使用阴影、渐变、玻璃模糊或悬浮面板。深度来自卡片描边、1px 结构线、超大字号与被裁切的横向轨道；卡片与页面共享哑黑底色，因此它们读作出版版面而非浮动容器。
+核心阅读界面是平面的。页眉、区段、文章正文与页脚依靠 1px 语义边框、虚线分隔、透明度和垂直留白建立层级，文章条目没有背景卡、描边框或阴影。唯一显著抬升是移动端返回顶部按钮使用圆形底、`shadow-xl` 和环形阅读进度；到 `md` 断点后取消阴影并变为带轻微背景透明度和模糊的文内控件。跳到正文链接也可使用轻微背景模糊，以便从页面上方浮现时保持可读。
 
-**The Flat Instrument Rule.** 所有表面在静止和交互状态都保持平面；反馈通过颜色反转、线条、位移和内容展开完成，不通过投影抬升。
+**The Flat Reading Rule.** 内容层级默认平面化；阴影只属于暂时覆盖内容的实用控件，不用于文章列表、导航或普通内容容器。
 
 ## Shapes
 
-所有可交互控件和内容容器均为直角（`0px`）。文章卡、主按钮、翻页按钮、状态点、进度线和焦点轮廓形成方形机械语言；图标统一使用无填充线条、方形端点与斜接连接，描边宽 1.6。头像保持原始方形裁切并转灰度，不使用圆形头像。
-
-结构线通常为 1px；当前导航和卡组进度为 2px。键盘焦点使用 2px 酸性青柠轮廓，向外偏移 5px。信号波形可以有连续有机曲线，但只能作为规则网格中的对比元素。
+主要页面结构、文章条目、导航与分隔线均为直角。交互识别更多来自虚线下划线、波浪形活动导航下划线、1–2px 边线与线性 SVG 图标，而不是圆角卡片。局部圆角是功能性的：行内代码使用轻微圆角（`inline`），搜索输入和桌面返回顶部控件使用 0.375rem（`control`），移动返回顶部按钮使用完全圆形（`round`）。图片默认有 1px 主题边框；关于页显式移除图片边框。
 
 ## Components
 
 ### Navigation
 
-- **Wordmark:** Noto Sans SC Local，800 字重，桌面 `clamp(1.35rem, 1.75vw, 1.7rem)`；移动端 1.25rem。
-- **Links:** 默认静音银、0.8rem、字距 0.06em、最小高度 44px；悬浮或当前项转暖白，并由 2px 钴蓝下划线从右向左展开。
-- **State:** `IntersectionObserver` 根据 `INDEX` 和 `ABOUT` 对应区段自动更新当前项；≤980px 隐藏顶部 GitHub，但页内仍保留联系入口。
+- **Desktop:** 阅读栏顶部水平排列站点名与导航；站点名为 1.5rem、600 字重，底部用 1px 主题边框收束。文字链接为中等字重，悬浮转强调色；当前栏目使用 2px 波浪下划线和 0.25rem 偏移。
+- **Mobile:** 站点名保持左侧，菜单按钮在右侧。按钮同步维护 `aria-expanded`、`aria-controls` 和“打开菜单 / 关闭菜单”标签；展开内容以中文文字为主，搜索与主题开关保留图标。
+- **Utilities:** 归档、搜索和主题控件使用无填充线性图标；移动端扩大内边距，主题按钮达到 48px 方形，桌面收为 32px。
 
-### Primary Action
+### Article Entry
 
-- **Shape:** 方形实色按钮（`0px`），桌面最小宽 14.75rem、高 4rem，水平内边距 1.7rem；卡片版本宽 13.5rem、高 3.6rem。
-- **Default:** 钴蓝底、黑字、750 字重，标签与右箭头两端对齐。
-- **Hover / Active:** 悬浮转酸性青柠，箭头向右移动 0.32rem；按下转按压青柠。背景切换 180ms，箭头位移 200ms。
-- **Mobile:** ≤620px 的首屏主按钮占满内容宽度。
+- **Structure:** 每篇文章是具有 1.5rem 上下间距的列表项，顺序为标题链接、日期、摘要。
+- **Title:** 1.125rem、500 字重、主题强调色；默认不画容器，悬浮时出现虚线下划线，键盘聚焦时以全局虚线焦点轮廓替代下划线。
+- **Metadata:** 日期与日历图标使用约 80% 不透明度；小尺寸为 0.875rem，文章详情中的大尺寸在 `sm` 断点恢复到 1rem。
+- **Body:** 摘要直接落在页面底色上，不使用背景、描边、圆角、缩略图或“阅读更多”按钮。
 
-### Article Deck
+### Theme Control
 
-- **Viewport / Track:** 视口隐藏溢出；轨道使用水平 flex、1.25rem 间距和 `translate3d`，切换时长 620ms。
-- **Published Card:** 1px 卡片描边、至少 35rem 高；顶部目录状态，主体标题/摘要/按钮/波形，底部详情开关与主题编码。
-- **Queued Card:** 使用暗银文本与状态点，明确标注 `QUEUE` 和“尚未发布”；不可伪装为可阅读内容。
-- **Navigation:** 前后按钮为 4.25rem 方形描边控制。可用状态为暖白，悬浮反转为暖白底黑字，按下使用酸性青柠；禁用状态降低对比并显示 `not-allowed`。
-- **Position Indicator:** `01 / 02` 居中，下方两段 3rem 进度线分别以钴蓝或酸性青柠表示当前卡。
+- **Resolution order:** 先读取 `localStorage`，若未保存且未设置固定主主题，则跟随 `prefers-color-scheme`。
+- **Behavior:** 主题值写入根元素 `data-theme`，在首屏脚本阶段提前应用以避免闪白；切换时保存偏好，并同步更新主题按钮的 `aria-label` 与浏览器 `theme-color`。
+- **Feedback:** 月亮与太阳图标通过旋转和缩放交替；系统主题改变时会同步更新站点主题。
 
-### Expandable Detail
+### Links and Tags
 
-- **Trigger:** 原生按钮，至少 44px 高，文本在“展开详情 / 收起详情”之间切换；加号图标展开时旋转 45°。
-- **Panel:** 默认 `grid-template-rows: 0fr`、透明且裁切；展开后变为 `1fr`，上下内边距 2rem并显示结构线。
-- **Metadata:** `TYPE / STATUS / READ` 桌面三列，≤620px 单列；League Gothic Local 标签配 Noto Sans SC Local 值。
-- **Semantics:** 同步维护 `aria-expanded`、`aria-controls` 与详情区 `aria-hidden`，视觉状态不得脱离无障碍状态。
+- **Body links:** 正文链接为前景色配虚线下划线，悬浮转强调色；长 URL 允许断行。
+- **Tags:** 标签前置井号图标并使用 2px 虚线底边；悬浮时向上移动 0.125rem，同时边框与文字转强调色。
+- **Icon links:** 社交与分享链接使用线性图标，悬浮轻微旋转 6deg；文本标签保留给屏幕阅读器。
 
-### Signal Wave Plate
+### Long-form Content
 
-- **Role:** 由钴蓝过渡到酸性青柠的信号线，作为文章主题的唯一抽象视觉；装饰性实例使用空 `alt`。
-- **Hero:** 桌面位于右侧，宽 54%、高 33%；进入时由右侧裁切展开并从 5px 模糊恢复清晰。
-- **Card:** 自适应卡片右栏，最小高度 12rem；移动端移到正文之后并降低为 7rem 最小高度。
+- **Typography:** `.app-prose` 覆盖 Tailwind Typography，使标题、正文、列表、表格和代码统一使用主题前景色。
+- **Code:** 行内代码置于 75% 弱化色背景和轻微圆角中；代码块使用 Shiki 的明暗双主题颜色，支持新增、删除、行高亮与词高亮。
+- **Structure:** 列表标记使用强调色，引用以强调色左边线和约 80% 不透明度区分，图片与表格使用主题边框，水平线使用主题边框。
+- **Article utilities:** 顶部 4px 阅读进度条使用强调色；二级及以下标题自动获得可复制锚点；代码块在悬浮或聚焦时显示复制控件。
 
-### About Block
+### Back to Top
 
-- **Identity:** 真实 GitHub 头像，最大 10rem，方形、灰度并提升对比；配 `ZSZ / PROFILE` 窄体编码。
-- **Copy:** 主标题沿用 Headline，说明文字最大 64ch；只陈述真实的写作与学习定位。
-- **Links:** 44px 最小触点，默认 1px 钴蓝底边；悬浮时文字和底边同时转酸性青柠。
-
-### Long-form Article
-
-- **Measure:** 标题、正文、页脚统一限制在 48rem 并居中；正文行高 2.0。
-- **Metadata:** `CATALOG 001`、日期和类型横向换行排列，首项使用钴蓝。
-- **Quote:** 上下各一条 1px 钴蓝线，字号 `clamp(1.4rem, 2.4vw, 2rem)`、700 字重，不使用引用卡片。
-- **Links:** 酸性青柠并始终带 1px 下划线，不能只靠颜色表达可点击性。
-
-### Motion
-
-- **Standard Ease:** `cubic-bezier(0.16, 1, 0.3, 1)`，用于轨道、裁切与机械位移。
-- **Signal Entrance:** 900ms，延迟 140ms，以 `clip-path` 和 5px 模糊恢复呈现。
-- **Deck:** 卡组平移 620ms；详情展开 440ms，透明度和边线 240ms；加号旋转 300ms。
-- **Micro-interactions:** 颜色 180ms，导航下划线 220ms，箭头位移 200ms。
-- **Reduced Motion:** `prefers-reduced-motion: reduce` 下关闭平滑滚动，把所有动画和过渡压缩至 0.01ms，并只播放一次。
+- **Mobile:** 固定在右下角的 56px 圆形按钮，外圈使用圆锥渐变显示阅读进度；页面滚动超过 30% 后以 500ms 位移和透明度过渡出现。
+- **Desktop:** 在 `md` 断点变为正文右侧的紧凑粘性控件，去除阴影并显示“回到顶部”文字。
 
 ### Accessibility
 
-- **Keyboard:** 页面首项提供跳到主要内容的链接；所有链接与按钮使用 2px 酸性青柠可见焦点，偏移 5px。
-- **Targets:** 导航、联系链接和详情开关至少 44px；主操作和翻页按钮更大。
-- **Semantics:** 使用语义化 `nav`、`article`、`time`、`dl` 和真实 `button`；卡组区域、导航和控件均有可读标签。
-- **Images:** 真实头像必须有姓名替代文本；纯装饰信号波形使用空替代文本。
-- **Touch:** 链接和按钮使用 `touch-action: manipulation`；禁用按钮同时具有原生 `disabled` 和明确低对比状态。
+- 页面开头提供“跳到正文”链接，平时位于视口上方，键盘聚焦时进入可视区。
+- 所有链接和按钮使用 2px 虚线强调色 `focus-visible` 轮廓和 1px 外偏移；正文链接聚焦时去除下划线，避免与轮廓叠加。
+- 导航、面包屑、分页与文章使用语义元素；当前面包屑使用 `aria-current="page"`，分页有可读标签，禁用分页项同时具备 `aria-disabled` 与视觉弱化。
+- 纯图标操作提供 `title`、`aria-label` 或屏幕阅读器专用文本；主题按钮使用 `aria-live="polite"`，移动菜单公开展开状态。
+- 明暗主题根据系统偏好初始化并保持高对比的前景/背景组合；选中文本反转为强调色底和页面背景色文字。
+- 当前源码启用平滑滚动和若干过渡，但没有显式的 `prefers-reduced-motion` 覆盖。新增动画时应补充减少动态分支，且不能让动画成为理解状态的唯一方式。
 
 ## Do's and Don'ts
 
 ### Do:
 
-- **Do** 为每篇真实文章分配连续三位编号，并在首屏、文章卡和正文元数据中保持一致。
-- **Do** 用哑黑、暖白、银灰和 1px 结构线搭建主体，把钴蓝和酸性青柠留给信号与反馈。
-- **Do** 让下一张文章卡始终部分露出，并让按钮、状态标签和进度指示同步当前卡。
-- **Do** 维持 Noto Sans SC Local / League Gothic Local 的职责分工与本地字体加载。
-- **Do** 在桌面、平板、移动端和减少动态模式下保留完整阅读路径与无障碍状态。
+- **Do** 直接复用 AstroPaper v5.5.1 的现有组件、线性图标和交互模式，再做必要的中文内容适配。
+- **Do** 让所有标准页面沿用居中的 `max-w-3xl` 阅读栏和 1rem 页面内边距。
+- **Do** 通过语义主题变量使用颜色，确保浅色蓝与深色橙承担同一强调职责。
+- **Do** 保持系统等宽字体贯穿导航、正文、元数据和代码。
+- **Do** 把文章列表写成标题—日期—摘要的平面条目，并保留虚线链接、细边框和稳定垂直节奏。
+- **Do** 同时验证 `<640px`、`≥640px` 和 `≥768px` 的导航、页脚、文章工具与长内容换行。
+- **Do** 保留跳转正文、清晰焦点、可读图标标签、菜单展开状态和主题状态同步。
 
 ### Don't:
 
-- **Don't** 恢复暖纸、红绿编辑标记、居中头像、圆角卡片或传统作品集首屏。
-- **Don't** 添加阴影、渐变、玻璃拟态、圆角胶囊或大面积酸性青柠背景。
-- **Don't** 把 League Gothic Local 用于中文正文，或使用第三种装饰字体破坏目录语言。
-- **Don't** 用虚构文章填满卡组；未发布内容必须以排队状态明确标识且不可点击。
-- **Don't** 依赖动画、悬浮或颜色单独传达状态；键盘、触摸和减少动态体验必须等价。
+- **Don't** 恢复旧版编号目录、超大目录号、信号波形、横向卡组、钴蓝/酸性青柠配色或 League Gothic / Noto Sans SC 字体组合。
+- **Don't** 把文章入口包成带阴影、圆角、背景色或大图的营销卡片。
+- **Don't** 把桌面阅读栏拉成全宽多栏首页，或让页眉、正文和页脚失去共同左边线。
+- **Don't** 在组件内硬编码主题色，或让强调色铺满大面积背景。
+- **Don't** 仅靠颜色、悬浮或动画表达当前状态；保留文字、图标、下划线、ARIA 与键盘焦点的等价信息。
+- **Don't** 为“品牌感”引入第二套展示字体、玻璃拟态、渐变背景或与 AstroPaper 无关的装饰系统。
