@@ -1,0 +1,92 @@
+{
+  "title": "选择原生 HTML 重构的视觉方向",
+  "question": "我研究了优秀个人网站后，将它们的优点转成四套不同的中文博客系统。请选择一套作为真正的重构基准。",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "城市导视札记",
+      "kicker": "THE ROLL",
+      "lineage": "现代城市导视、站台编号与公共信息系统",
+      "thesis": "把作者、文章和联系方式组织成一条清晰可走的阅读路线。",
+      "palette": ["#1434CB", "#F2F0E7", "#111111", "#FF5A1F"],
+      "materials": ["搪瓷导视牌", "路线编号", "方向箭头"],
+      "viewport": "左侧是一枚巨大的作者编号与姓名，右侧把简介、最新文章和联系方式排成三站；阅读按钮像明确的下一站。",
+      "risk": "如果编号过多，会像公共服务网站而削弱个人感。",
+      "raised": [
+        {"from": "张力结构", "raise": "用不对称栅格制造真实张力，不再平均分配每个区块。"},
+        {"from": "拼装说明书", "raise": "每个区块获得清楚的编号和阅读顺序。"},
+        {"from": "工厂目录", "raise": "文章元数据像目录条目一样精确、克制。"}
+      ],
+      "comp": ".impeccable/mocks/decision-v2/wayfinding.png"
+    },
+    {
+      "id": "model-pick",
+      "label": "作者索引",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "Paco Coursey 与 Lee Robinson 式的内容优先个人索引",
+      "thesis": "一句话认识作者，下一秒就能看见他在写什么。",
+      "palette": ["#F7F7F3", "#171717", "#6B6B63", "#B7F34A"],
+      "materials": ["网页目录", "文本链接", "微交互光标"],
+      "viewport": "窄而精确的作者介绍在左，文章、正在做的事与联系方式在右，所有内容都是真链接。",
+      "risk": "这是最稳妥也最熟悉的方向，若排版不够精准会显得普通。",
+      "comp": ".impeccable/mocks/decision-v2/author-index.png"
+    },
+    {
+      "id": "challenger-factory",
+      "label": "作品编号目录",
+      "verdict": "competitive",
+      "lineage": "Factory Records 唱片目录与工业编号系统",
+      "thesis": "把每篇文章当成一件有编号、有状态的个人出版物。",
+      "palette": ["#0A0A0A", "#F4F2EA", "#275DFF", "#D9FF43"],
+      "materials": ["哑黑目录", "编号标签", "单线波形"],
+      "viewport": "黑色首页以 ZSZ 001 建立身份，文章标题像目录主件，鼠标移动只让一条线产生轻微脉冲。",
+      "case": "个性强、技术感足；文章入口仍清楚，但暗色视觉比作者索引更有距离。",
+      "risk": "编码语言太重时，第一次访问者可能需要多看一秒。",
+      "comp": ".impeccable/mocks/decision-v2/factory-catalog.png",
+      "hero": "https://impeccable.style/worlds/cards/brand-identity-canon-saville-catalog-sleeve-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/brand-identity-canon-saville-catalog-sleeve.webp"
+    },
+    {
+      "id": "challenger-manual",
+      "label": "彩色索引手册",
+      "verdict": "competitive",
+      "lineage": "分色参考手册、页签与透明覆页",
+      "thesis": "像翻一本结构清楚的个人参考手册，认识作者并进入文章。",
+      "palette": ["#F7F3E8", "#151515", "#FF6B35", "#007A78", "#F4C542"],
+      "materials": ["彩色页签", "半透明覆页", "章节索引"],
+      "viewport": "左边是一列贯穿全页的彩色章节页签，右边叠放作者简介与最新文章，点击页签像翻到对应章节。",
+      "case": "阅读导航非常自然，中文长文适配好；实现细节多于其他方向。",
+      "risk": "透明层若控制不好，会显得像文具品牌而不是个人博客。",
+      "comp": ".impeccable/mocks/decision-v2/tabbed-manual.png",
+      "hero": "https://impeccable.style/worlds/cards/rw-manual-acetate-tab-board-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/rw-manual-acetate-tab-board.webp"
+    },
+    {
+      "id": "declined-bricks",
+      "label": "拼装说明书",
+      "verdict": "declined",
+      "lineage": "积木拼装步骤书",
+      "thesis": "访客按步骤认识作者并打开文章。",
+      "palette": ["#8ECDF4", "#F6F0E8", "#D62F2F", "#F4C542"],
+      "materials": ["步骤编号", "零件框", "虚线箭头"],
+      "viewport": "首页像第一步拼装说明，内容按顺序落位。",
+      "case": "结构清楚但童趣过强，不符合当前真实内容的语气。",
+      "kept": "保留它极清楚的编号与先后关系。",
+      "risk": "容易把个人博客做成趣味演示。",
+      "hero": "https://impeccable.style/worlds/cards/games-toys-physics-play-brick-build-instructions-hero.webp"
+    }
+  ],
+  "reroll": {"registers": ["safer", "bolder"]},
+  "buildPath": {"value": "comp", "toggle": true},
+  "canon": true,
+  "canonCard": {
+    "label": "标准个人主页",
+    "thesis": "居中头像、个人简介、文章卡片和社交链接，按成熟范式精致执行。",
+    "palette": ["#FFFFFF", "#111827", "#64748B", "#2563EB"],
+    "materials": ["标准内容容器", "文章卡片", "简洁导航"],
+    "viewport": "居中姓名和简介，下方是一张最新文章卡片与联系方式。",
+    "risk": "最容易理解，也最难留下独特记忆。",
+    "comp": ".impeccable/mocks/decision-v2/canon.png"
+  },
+  "steer": true
+}

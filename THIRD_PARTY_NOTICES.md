@@ -1,11 +1,10 @@
 # Third-party notices
 
-## React Bits — Magnet
+## Self-hosted fonts
 
-The `components/magnet.tsx` interaction is adapted from React Bits by David Haz.
+The deployed static site includes League Gothic and Noto Sans SC from the Google Fonts repository. Each font is distributed under the SIL Open Font License 1.1; the corresponding license text is included beside the font files under `site/assets/fonts/`.
 
-Copyright (c) 2026 David Haz
+Sources:
 
-Licensed under the MIT + Commons Clause License Condition v1.0. Permission is granted to use, copy, modify, merge, publish, and distribute the software as part of an application, website, or product. The component itself may not be sold, sublicensed, or redistributed alone, in a bundle, or as a ported version. The software is provided without warranty.
-
-Source: https://github.com/DavidHDev/react-bits
+- https://github.com/google/fonts/tree/main/ofl/leaguegothic
+- https://github.com/google/fonts/tree/main/ofl/notosanssc

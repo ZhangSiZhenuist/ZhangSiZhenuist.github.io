@@ -41,6 +41,13 @@ next-env.d.ts
 # local design review artifacts
 /.impeccable/build/
 /.impeccable/review/
+/.impeccable/edge-*/
+/.impeccable/archive/
+/.impeccable/questions/
+/.impeccable/reference/
+/.impeccable/mocks/decision-v2/
+/.impeccable/mocks/factory-b-*
+/.impeccable/mocks/factory-c-*
 /.impeccable/mocks/home-a-approved.json
 /.impeccable/mocks/home-b-*
 /.impeccable/mocks/home-c-*

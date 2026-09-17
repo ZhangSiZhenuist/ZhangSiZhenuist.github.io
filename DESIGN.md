@@ -1,198 +1,274 @@
 ---
-name: "章思哲个人博客"
-description: "以暖纸、深墨和克制双色标记构成的内容优先个人出版物。"
+name: "章思哲个人博客：编号出版目录"
+description: "以哑黑画布、暖白文字、钴蓝与酸性青柠信号构成的编号个人出版目录。"
 colors:
-  primary-teal: "#227a73"
-  secondary-red: "#af3029"
-  paper: "#fffcf0"
-  ink: "#1c1b1a"
-  muted-ink: "#6f6b62"
-  hairline: "#dad6cc"
+  signal-blue: "#3869f8"
+  signal-lime: "#d9ff43"
+  signal-lime-pressed: "#b9de2e"
+  matte-black: "#090909"
+  warm-white: "#f8f7ec"
+  muted-silver: "#a8aaad"
+  dim-silver: "#85898e"
+  hairline: "#34383b"
+  card-stroke: "#474b4e"
 typography:
+  catalog-number:
+    fontFamily: '"Noto Sans SC Local", sans-serif'
+    fontSize: "clamp(11rem, 14vw, 13.4rem)"
+    fontWeight: 900
+    lineHeight: 0.72
+    letterSpacing: "-0.06em"
   display:
-    fontFamily: '"Noto Sans SC", "Microsoft YaHei", "PingFang SC", system-ui, sans-serif'
-    fontSize: "clamp(3rem, 3.4vw, 3.4rem)"
-    fontWeight: 650
-    lineHeight: 1.1
-    letterSpacing: "0.015em"
+    fontFamily: '"Noto Sans SC Local", "Microsoft YaHei", sans-serif'
+    fontSize: "clamp(4rem, 7.3vw, 7rem)"
+    fontWeight: 850
+    lineHeight: 1.02
+    letterSpacing: "-0.04em"
   headline:
-    fontFamily: '"Noto Sans SC", "Microsoft YaHei", "PingFang SC", system-ui, sans-serif'
-    fontSize: "clamp(2.8rem, 6vw, 5.2rem)"
-    fontWeight: 650
-    lineHeight: 1.08
-    letterSpacing: "-0.055em"
-  title:
-    fontFamily: '"Noto Sans SC", "Microsoft YaHei", "PingFang SC", system-ui, sans-serif'
-    fontSize: "clamp(2.25rem, 2.5vw, 2.5rem)"
-    fontWeight: 630
-    lineHeight: 1.15
-    letterSpacing: "-0.05em"
+    fontFamily: '"Noto Sans SC Local", "Microsoft YaHei", sans-serif'
+    fontSize: "clamp(3.6rem, 7vw, 6rem)"
+    fontWeight: 850
+    lineHeight: 0.98
+    letterSpacing: "-0.04em"
+  card-title:
+    fontFamily: '"Noto Sans SC Local", "Microsoft YaHei", sans-serif'
+    fontSize: "clamp(3rem, 5.4vw, 5.6rem)"
+    fontWeight: 850
+    lineHeight: 1.04
+    letterSpacing: "-0.04em"
   body:
-    fontFamily: '"Noto Sans SC", "Microsoft YaHei", "PingFang SC", system-ui, sans-serif'
+    fontFamily: '"Noto Sans SC Local", "Microsoft YaHei", sans-serif'
     fontSize: "1rem"
     fontWeight: 400
     lineHeight: 1.65
-  label:
-    fontFamily: '"Noto Sans SC", "Microsoft YaHei", "PingFang SC", system-ui, sans-serif'
+  post-body:
+    fontFamily: '"Noto Sans SC Local", "Microsoft YaHei", sans-serif'
+    fontSize: "1.08rem"
+    fontWeight: 400
+    lineHeight: 2
+  catalog-label:
+    fontFamily: '"League Gothic Local", "Noto Sans SC Local", sans-serif'
     fontSize: "0.9rem"
-    fontWeight: 700
+    fontWeight: 400
+    lineHeight: 1.7
+    letterSpacing: "0.14em"
+  action:
+    fontFamily: '"Noto Sans SC Local", "Microsoft YaHei", sans-serif'
+    fontSize: "1rem"
+    fontWeight: 750
     lineHeight: 1.65
-    letterSpacing: "0.08em"
 rounded:
   square: "0px"
-  avatar: "50%"
 spacing:
-  inline: "0.5rem"
-  content: "1rem"
-  cluster: "1.5rem"
-  section: "3rem"
-  page: "clamp(1.25rem, 6vw, 7rem)"
+  screen-edge: "4.1vw"
+  deck-gap: "1.25rem"
+  heading-gap: "4rem"
+  card-inset: "clamp(1.4rem, 4vw, 4rem)"
+  section-block: "clamp(6rem, 10vw, 10rem)"
 components:
-  article-action:
-    textColor: "{colors.primary-teal}"
-    typography: "{typography.body}"
+  primary-action:
+    backgroundColor: "{colors.signal-blue}"
+    textColor: "{colors.matte-black}"
+    typography: "{typography.action}"
     rounded: "{rounded.square}"
-    height: "48px"
-  article-row:
-    backgroundColor: "{colors.paper}"
-    textColor: "{colors.ink}"
+    padding: "0 1.7rem"
+    height: "4rem"
+  primary-action-hover:
+    backgroundColor: "{colors.signal-lime}"
+    textColor: "{colors.matte-black}"
+  primary-action-active:
+    backgroundColor: "{colors.signal-lime-pressed}"
+    textColor: "{colors.matte-black}"
+  article-card:
+    backgroundColor: "{colors.matte-black}"
+    textColor: "{colors.warm-white}"
     rounded: "{rounded.square}"
-    padding: "2.7rem 0"
-  navigation-link:
-    textColor: "{colors.ink}"
-    typography: "{typography.body}"
+    width: "min(71vw, 68rem)"
+  deck-control:
+    backgroundColor: "{colors.matte-black}"
+    textColor: "{colors.warm-white}"
     rounded: "{rounded.square}"
-    height: "44px"
+    size: "4.25rem"
 ---
 
 # Design System: 章思哲个人博客
 
 ## Overview
 
-**Creative North Star: “公开学习札记”**
+**Creative North Star: “编号出版目录 / Numbered Publishing Catalog”**
 
-这是一个安静、诚实的个人出版空间：访客先认识章思哲，再顺着清晰的文章入口开始阅读。视觉像一张被认真排版的暖色数字纸张，用排版、留白和细线建立秩序，不用口号式英雄区、卡片墙或装饰性隐喻争夺注意力。
+这是一个把每篇文章当作独立编号出版物的个人博客。它以目录、档案编号、状态标签和信号波形组织信息：访客先在首屏识别作者与 CATALOG 001，再直接进入真实文章，而不是经过居中头像、履历卡片或泛化作品集介绍。
 
-系统保持适度的编辑感，但中文可读性优先。深墨承担内容，深青绿指向可行动与当前状态，氧化红只做类别和身份标记；真实头像是唯一主要图像。
+视觉气质冷静、技术化、强对比。哑黑背景像设备面板，暖白大字承担叙事，钴蓝与酸性青柠分别标记主路径和高反馈状态；超大编号、细线网格、压缩英文标签、方形按钮与横向卡组共同构成可扩展的出版目录语言。
 
 **Key Characteristics:**
 
-- 暖纸底色与深墨文字贯穿整页。
-- 单一中文无衬线字体栈，靠字号、字重与留白建立层级。
-- 发丝细分隔线、直角轮廓和排版式文章行取代卡片。
-- 氧化红与深青绿稀疏出现，各自承担明确语义。
-- 动效轻、短且可关闭，不改变内容阅读顺序。
+- 每篇内容必须拥有连续的三位目录编号，如 `001`、`002`。
+- 哑黑连续画布上使用暖白大标题、银灰辅助信息和 1px 结构线。
+- 钴蓝是默认操作信号，酸性青柠用于悬浮、焦点、选区和正文链接。
+- 超大编号与中文粗体标题使用 Noto Sans SC Local；窄体元数据使用 League Gothic Local。
+- 信号波形是唯一主要抽象图像，并与文章编号一同出现。
+- 所有交互保持直角、机械、可键盘访问，并尊重减少动态偏好。
 
 ## Colors
 
-色彩像旧纸上的双色编辑标记：大面积保持中性，强调色只在能帮助理解或行动的位置出现。
+配色来自暗色设备界面与印刷校样标记：大面积保持近黑与暖白，两个高饱和信号色只负责路径和反馈。
 
 ### Primary
 
-- **深青绿**（`#227a73`）：文章动作、当前导航下划线、标题短线、正文链接与引用标记；代表“可继续阅读”。
+- **钴蓝信号**（`#3869f8`）：主阅读按钮、当前导航下划线、文章状态点、目录进度和文章元数据；它代表默认可行动路径。
 
 ### Secondary
 
-- **氧化红**（`#af3029`）：作者标记、在线状态点、文章类别和日期标签；代表“身份与编辑注记”。
+- **酸性青柠**（`#d9ff43`）：主按钮悬浮、键盘焦点、文本选区、正文链接和激活后的目录进度；它代表即时反馈，而不是静态装饰。
+- **按压青柠**（`#b9de2e`）：主操作按下时的唯一暗化状态。
 
 ### Neutral
 
-- **暖纸**（`#fffcf0`）：唯一页面底色，也是所有内容区的连续画布。
-- **深墨**（`#1c1b1a`）：主标题、正文和关键名称。
-- **风化灰墨**（`#6f6b62`）：日期、摘要、联系方式和辅助说明。
-- **发丝灰**（`#dad6cc`）：页眉、文章行、正文与页脚之间的结构分隔。
+- **哑黑**（`#090909`）：页面和文章卡片的连续底色。
+- **暖白**（`#f8f7ec`）：主标题、关键文本和反转控制内容。
+- **静音银**（`#a8aaad`）：日期、导航默认态、页脚和次级说明。
+- **暗银**（`#85898e`）：编码标签、未发布状态与低优先级文字。
+- **结构线**（`#34383b`）：分区、页脚、卡片内部和详情区的 1px 分隔。
+- **卡片描边**（`#474b4e`）：已发布与排队文章卡片的外轮廓。
 
 ### Named Rules
 
-**The Two-Ink Rule.** 深青绿只表示阅读路径或当前状态，氧化红只表示身份与编辑标签；两者都不铺成大面积背景。
+**The Signal Hierarchy Rule.** 钴蓝表示默认路径，酸性青柠表示反馈或最高显著性；不要互换两者的角色，也不要让它们成为大面积背景。
 
-**The One-Paper Rule.** 页面保持一张连续暖纸，不用白色卡片或交替色块切碎阅读流。
+**The Continuous Black Rule.** 页面区段与卡片保持同一哑黑底色，层级依靠描边、留白、字号与信号色建立，不使用交替背景色。
 
 ## Typography
 
-**Display Font:** Noto Sans SC（回退 Microsoft YaHei、PingFang SC 与系统无衬线）  
-**Body Font:** Noto Sans SC（相同回退栈）
+**Display Font:** Noto Sans SC Local（本地可变字重，回退 Microsoft YaHei 与 sans-serif）
+**Body Font:** Noto Sans SC Local（同一字体栈）
+**Catalog Label Font:** League Gothic Local（回退 Noto Sans SC Local 与 sans-serif）
 
-**Character:** 中文无衬线排版清晰、直接、略带编辑出版感。系统不靠字体混搭制造个性，而用紧凑标题、宽松正文行距和数字等宽特性保持秩序。
+**Character:** Noto Sans SC Local 负责中文阅读与极粗显示层级，既能承载 16px 正文，也能扩展到 200px 以上的目录编号。League Gothic Local 只出现在短英文编码、状态名和档案标签中，以窄体节奏强化目录感；它不用于中文正文。
 
 ### Hierarchy
 
-- **Display**（650，`clamp(3rem, 3.4vw, 3.4rem)`，1.1）：首页问候，只出现一次；桌面尽量保持单行，移动端自然断成两行。
-- **Headline**（650，`clamp(2.8rem, 6vw, 5.2rem)`，1.08）：文章页内标题，用于开始一次沉浸阅读。
-- **Title**（630，`clamp(2.25rem, 2.5vw, 2.5rem)`，1.15）：文章列表标题，必须比摘要更快被扫到。
-- **Body**（400，`1rem`，1.65；长文 2.0）：导航、说明和正文。长文阅读宽度限制在 48rem。
-- **Label**（700，`0.9rem`，字距 `0.08em`）：文章类别与日期组合，稀疏使用。
+- **Catalog Number**（900，`clamp(11rem, 14vw, 13.4rem)`，0.72，字距 `-0.06em`）：首屏三位编号；桌面纵向放大 1.18 倍，移动端改为 `clamp(8rem, 33vw, 12rem)` 并取消变形。
+- **Display**（850，`clamp(4rem, 7.3vw, 7rem)`，1.02，字距 `-0.04em`）：首屏文章标题；桌面横向放大 1.07 倍，移动端允许自然换行。
+- **Headline**（850，`clamp(3.6rem, 7vw, 6rem)`，0.98，字距 `-0.04em`）：文章目录、关于区和正文标题；620px 以下统一为 `clamp(3rem, 15vw, 4.6rem)`。
+- **Card Title**（850，`clamp(3rem, 5.4vw, 5.6rem)`，1.04，字距 `-0.04em`）：文章卡主标题；620px 以下收敛为 `clamp(2.8rem, 13vw, 4rem)`。
+- **Body**（400，`1rem`，1.65）：导航外的大多数说明文字；页面基准字号不低于 16px。
+- **Post Body**（400，`1.08rem`，2.0）：长文正文，620px 以下回到 `1rem`，阅读宽度上限 48rem。
+- **Catalog Label**（400，约 `0.9rem`，字距 `0.10–0.14em`）：`CATALOG 001`、`TYPE`、`STATUS`、作者编码和文章结束标记；仅限短文本。
 
 ### Named Rules
 
-**The One-Family Rule.** 不引入展示性衬线体、等宽体或手写体；层级只通过同一中文无衬线家族的尺度、字重、行距与颜色建立。
+**The Two-Type Rule.** Noto Sans SC Local 承担所有中文与主要显示层级；League Gothic Local 只承担短英文目录元数据。不得引入第三种字体。
+
+**The Number-before-Title Rule.** 每个出版入口先出现编号或 `CATALOG` 标签，再出现文章标题；编号是导航结构，不是装饰水印。
 
 ## Layout
 
-页面使用最大 84rem 的居中连续画布，左右页边距由 `clamp(1.25rem, 6vw, 7rem)` 调节。桌面首屏的介绍区约为 65/35 双栏：文字在左，真实圆形头像与状态在右；下方文章入口是一条贯穿容器的三栏排版行，顺序为日期、内容、动作。
+全站采用宽屏、不对称的目录式构图。通用内容宽度为 `min(91.8vw, 92rem)`；首屏使用 `100svh` 且最小高度 48rem，桌面关键内容以约 4.1% 的左右边距绝对定位：作者导航在顶部，编号与文章标题占左侧，宽幅信号波形占右半部，联系方式和版权固定在首屏底部边线之上。
 
-正文收窄到 48rem 并居中，以较大的垂直间距和 2.0 行高支持中文长读。760px 以下，介绍、文章行和联系方式依次堆叠；头像缩为 4.5rem 并与状态并排。所有关键触点保持至少 44px 高，移动端不得横向滚动。
+文章目录使用横向可选择卡组。已发布卡宽 `min(71vw, 68rem)`，待发布卡宽 `min(28vw, 24rem)`，卡间距 1.25rem；轨道被视口裁切，通过前后按钮平移。卡片主体在桌面为文字/波形双栏，顶部存放目录号和日期，底部存放详情开关与主题编码。关于区为头像、介绍、作者编码三栏，长文区收窄至 48rem。
 
-**The Reading-First Grid Rule.** 每个区块都必须沿 DOM 阅读顺序自然成立；网格只增强层级，不能依赖视觉换序解释内容。
+### Responsive Structure
+
+- **≤980px:** 首屏从绝对定位改为五行网格，使用 1.25rem 页面内边距；页眉变为两列，隐藏状态短句、GitHub 顶部导航、主题栈和宣言栈。波形变为全宽，联系信息纵排；文章卡主体改为单列，关于区改为头像/介绍两列。
+- **≤620px:** 通用内容宽度变为 `calc(100vw - 2.5rem)`；主阅读按钮铺满容器，首屏页脚、关于区和文章页脚纵向堆叠。已发布卡占满内容宽，待发布卡保留下一张露出的预告宽度；详情元数据从三列变一列。
+- **Minimum:** 页面最小宽度 320px，任何视口不得产生意外横向滚动；卡组横移量必须与对应断点的卡宽一致。
+
+**The Asymmetric Balance Rule.** 左侧用编号和标题建立重量，右侧用信号波形与小型编码栈平衡；不要把首屏重新居中成头像加简介。
+
+**The Peek-ahead Rule.** 文章卡组必须在桌面和移动端都露出下一张卡的一部分，让横向导航关系在操作前就可见。
 
 ## Elevation & Depth
 
-系统完全无阴影。层次由暖纸上的发丝分隔线、字号反差、内容宽度和留白建立；悬浮态只改变颜色、下划线或轻微位移，不抬升整块内容。
+系统不使用阴影、渐变、玻璃模糊或悬浮面板。深度来自卡片描边、1px 结构线、超大字号与被裁切的横向轨道；卡片与页面共享哑黑底色，因此它们读作出版版面而非浮动容器。
 
-**The Flat-by-Default Rule.** 不为导航、文章入口、联系方式或正文添加阴影、玻璃模糊与浮层质感。
+**The Flat Instrument Rule.** 所有表面在静止和交互状态都保持平面；反馈通过颜色反转、线条、位移和内容展开完成，不通过投影抬升。
 
 ## Shapes
 
-结构元素全部使用直角：导航下划线、标题短线、状态方点、文章行和焦点轮廓都保持几何克制。唯一的圆形是作者头像，用来清晰地区分真实人物与排版系统。边框固定为 1px 发丝线；可见键盘焦点使用 3px 半透明深青绿轮廓并向外偏移 5px。
+所有可交互控件和内容容器均为直角（`0px`）。文章卡、主按钮、翻页按钮、状态点、进度线和焦点轮廓形成方形机械语言；图标统一使用无填充线条、方形端点与斜接连接，描边宽 1.6。头像保持原始方形裁切并转灰度，不使用圆形头像。
+
+结构线通常为 1px；当前导航和卡组进度为 2px。键盘焦点使用 2px 酸性青柠轮廓，向外偏移 5px。信号波形可以有连续有机曲线，但只能作为规则网格中的对比元素。
 
 ## Components
 
 ### Navigation
 
-- **Wordmark:** 深墨粗体名称配一个氧化红方点；整块触点至少 44px。
-- **Links:** 常态为深墨，悬浮转氧化红；当前“文章”项用 3px 深青绿下划线定位。
-- **Mobile:** 760px 以下保留“文章”和“关于”，隐藏外部 GitHub 项以避免拥挤；联系方式区仍提供 GitHub。
+- **Wordmark:** Noto Sans SC Local，800 字重，桌面 `clamp(1.35rem, 1.75vw, 1.7rem)`；移动端 1.25rem。
+- **Links:** 默认静音银、0.8rem、字距 0.06em、最小高度 44px；悬浮或当前项转暖白，并由 2px 钴蓝下划线从右向左展开。
+- **State:** `IntersectionObserver` 根据 `INDEX` 和 `ABOUT` 对应区段自动更新当前项；≤980px 隐藏顶部 GitHub，但页内仍保留联系入口。
 
-### Article Row
+### Primary Action
 
-- **Structure:** 上下各一条 1px 发丝线；桌面以日期、文章内容、阅读动作三列组织，移动端按相同语义顺序堆叠。
-- **Typography:** 氧化红类别、深墨标题、风化灰墨摘要；标题悬浮或聚焦时出现从左展开的 2px 深青绿下划线。
-- **Action:** 深青绿文字与箭头，底部 2px 实线；桌面指针靠近时允许轻微磁吸，触摸设备和减少动态模式禁用。
+- **Shape:** 方形实色按钮（`0px`），桌面最小宽 14.75rem、高 4rem，水平内边距 1.7rem；卡片版本宽 13.5rem、高 3.6rem。
+- **Default:** 钴蓝底、黑字、750 字重，标签与右箭头两端对齐。
+- **Hover / Active:** 悬浮转酸性青柠，箭头向右移动 0.32rem；按下转按压青柠。背景切换 180ms，箭头位移 200ms。
+- **Mobile:** ≤620px 的首屏主按钮占满内容宽度。
 
-### Avatar Status
+### Article Deck
 
-- **Avatar:** 真实 GitHub 头像，灰度处理，1px 发丝边框，圆形裁切；不得用插画或占位图替换。
-- **Status:** 小氧化红方点加一行风化灰墨说明，语气事实化，不夸张包装。
+- **Viewport / Track:** 视口隐藏溢出；轨道使用水平 flex、1.25rem 间距和 `translate3d`，切换时长 620ms。
+- **Published Card:** 1px 卡片描边、至少 35rem 高；顶部目录状态，主体标题/摘要/按钮/波形，底部详情开关与主题编码。
+- **Queued Card:** 使用暗银文本与状态点，明确标注 `QUEUE` 和“尚未发布”；不可伪装为可阅读内容。
+- **Navigation:** 前后按钮为 4.25rem 方形描边控制。可用状态为暖白，悬浮反转为暖白底黑字，按下使用酸性青柠；禁用状态降低对比并显示 `not-allowed`。
+- **Position Indicator:** `01 / 02` 居中，下方两段 3rem 进度线分别以钴蓝或酸性青柠表示当前卡。
 
-### Contact Links
+### Expandable Detail
 
-- **Style:** Lucide 线性图标、风化灰墨文字、至少 44px 触点；悬浮转氧化红。
-- **Behavior:** 邮箱使用 `mailto:`，GitHub 在新标签页打开；移动端纵向排列并允许长邮箱安全换行。
+- **Trigger:** 原生按钮，至少 44px 高，文本在“展开详情 / 收起详情”之间切换；加号图标展开时旋转 45°。
+- **Panel:** 默认 `grid-template-rows: 0fr`、透明且裁切；展开后变为 `1fr`，上下内边距 2rem并显示结构线。
+- **Metadata:** `TYPE / STATUS / READ` 桌面三列，≤620px 单列；League Gothic Local 标签配 Noto Sans SC Local 值。
+- **Semantics:** 同步维护 `aria-expanded`、`aria-controls` 与详情区 `aria-hidden`，视觉状态不得脱离无障碍状态。
+
+### Signal Wave Plate
+
+- **Role:** 由钴蓝过渡到酸性青柠的信号线，作为文章主题的唯一抽象视觉；装饰性实例使用空 `alt`。
+- **Hero:** 桌面位于右侧，宽 54%、高 33%；进入时由右侧裁切展开并从 5px 模糊恢复清晰。
+- **Card:** 自适应卡片右栏，最小高度 12rem；移动端移到正文之后并降低为 7rem 最小高度。
+
+### About Block
+
+- **Identity:** 真实 GitHub 头像，最大 10rem，方形、灰度并提升对比；配 `ZSZ / PROFILE` 窄体编码。
+- **Copy:** 主标题沿用 Headline，说明文字最大 64ch；只陈述真实的写作与学习定位。
+- **Links:** 44px 最小触点，默认 1px 钴蓝底边；悬浮时文字和底边同时转酸性青柠。
 
 ### Long-form Article
 
-- **Measure:** 标题、导语和正文都限制在 48rem；正文行高 2.0。
-- **Quote:** 不使用卡片或引号图片，左侧仅放一个放大的深青绿中文开引号。
-- **Links:** 深青绿、较高字重并带 1px 下划线，不能只靠颜色表达可点击性。
+- **Measure:** 标题、正文、页脚统一限制在 48rem 并居中；正文行高 2.0。
+- **Metadata:** `CATALOG 001`、日期和类型横向换行排列，首项使用钴蓝。
+- **Quote:** 上下各一条 1px 钴蓝线，字号 `clamp(1.4rem, 2.4vw, 2rem)`、700 字重，不使用引用卡片。
+- **Links:** 酸性青柠并始终带 1px 下划线，不能只靠颜色表达可点击性。
 
 ### Motion
 
-- **Entrance:** 首屏区块向上 10px 淡入，时长 520ms，使用 `cubic-bezier(0.22, 1, 0.36, 1)`，分四级轻微错峰。
-- **Interaction:** 常规颜色切换 180ms；文章标题下划线 220ms；磁吸进入 180ms、复位 420ms。
-- **Accessibility:** `prefers-reduced-motion: reduce` 下关闭平滑滚动，并把动画与过渡压缩到近乎即时。
+- **Standard Ease:** `cubic-bezier(0.16, 1, 0.3, 1)`，用于轨道、裁切与机械位移。
+- **Signal Entrance:** 900ms，延迟 140ms，以 `clip-path` 和 5px 模糊恢复呈现。
+- **Deck:** 卡组平移 620ms；详情展开 440ms，透明度和边线 240ms；加号旋转 300ms。
+- **Micro-interactions:** 颜色 180ms，导航下划线 220ms，箭头位移 200ms。
+- **Reduced Motion:** `prefers-reduced-motion: reduce` 下关闭平滑滚动，把所有动画和过渡压缩至 0.01ms，并只播放一次。
+
+### Accessibility
+
+- **Keyboard:** 页面首项提供跳到主要内容的链接；所有链接与按钮使用 2px 酸性青柠可见焦点，偏移 5px。
+- **Targets:** 导航、联系链接和详情开关至少 44px；主操作和翻页按钮更大。
+- **Semantics:** 使用语义化 `nav`、`article`、`time`、`dl` 和真实 `button`；卡组区域、导航和控件均有可读标签。
+- **Images:** 真实头像必须有姓名替代文本；纯装饰信号波形使用空替代文本。
+- **Touch:** 链接和按钮使用 `touch-action: manipulation`；禁用按钮同时具有原生 `disabled` 和明确低对比状态。
 
 ## Do's and Don'ts
 
 ### Do:
 
-- **Do** 先呈现真实作者身份，再给出首屏可见的文章入口。
-- **Do** 把暖纸、深墨、发丝线和大量留白当作主要视觉材料。
-- **Do** 保持每个强调色的语义稳定，并为键盘、触摸与减少动态场景提供完整体验。
-- **Do** 只展示真实文章、头像、联系方式和可验证内容。
+- **Do** 为每篇真实文章分配连续三位编号，并在首屏、文章卡和正文元数据中保持一致。
+- **Do** 用哑黑、暖白、银灰和 1px 结构线搭建主体，把钴蓝和酸性青柠留给信号与反馈。
+- **Do** 让下一张文章卡始终部分露出，并让按钮、状态标签和进度指示同步当前卡。
+- **Do** 维持 Noto Sans SC Local / League Gothic Local 的职责分工与本地字体加载。
+- **Do** 在桌面、平板、移动端和减少动态模式下保留完整阅读路径与无障碍状态。
 
 ### Don't:
 
-- **Don't** 使用卡片墙、渐变、玻璃拟态、投影、圆角容器或大面积强调色。
-- **Don't** 使用口号式全屏英雄区、胶片隐喻、复古胶片配色或装饰性视觉叙事。
-- **Don't** 混用多套字体、把中文压得过紧，或让装饰阻挡文章阅读入口。
-- **Don't** 伪造项目、履历、统计数字、推荐语或更多文章来填满版面。
+- **Don't** 恢复暖纸、红绿编辑标记、居中头像、圆角卡片或传统作品集首屏。
+- **Don't** 添加阴影、渐变、玻璃拟态、圆角胶囊或大面积酸性青柠背景。
+- **Don't** 把 League Gothic Local 用于中文正文，或使用第三种装饰字体破坏目录语言。
+- **Don't** 用虚构文章填满卡组；未发布内容必须以排队状态明确标识且不可点击。
+- **Don't** 依赖动画、悬浮或颜色单独传达状态；键盘、触摸和减少动态体验必须等价。
