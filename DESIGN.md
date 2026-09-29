@@ -1,213 +1,286 @@
 ---
-name: "章思哲个人博客：AstroPaper v5.5.1"
-description: "直接复用 AstroPaper v5.5.1 的居中等宽双主题阅读系统。"
+name: "章思哲个人博客：思想航线"
+description: "以深海军蓝电影画面、编辑排版与鲜明行动色构成的可探索个人写作航线。"
 colors:
-  light-background: "#fdfdfd"
-  light-foreground: "#282728"
-  light-accent: "#006cac"
-  light-muted: "#e6e6e6"
-  light-border: "#ece9e9"
-  dark-background: "#212737"
-  dark-foreground: "#eaedf3"
-  dark-accent: "#ff6b01"
-  dark-muted: "#343f60"
-  dark-border: "#ab4b08"
+  deep-navy: "#001B48"
+  flight-blue: "#02457A"
+  cloud-white: "#F5F5F7"
+  cool-muted: "#9BB1C4"
+  signal-yellow: "#FFDE17"
+  signal-yellow-hover: "#E5C50C"
+  route-amber: "#FFB300"
+  atmospheric-line: "rgba(255, 255, 255, 0.12)"
+  contact-light: "#F2F4F5"
 typography:
   display:
-    fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
-    fontSize: "3rem"
-    fontWeight: 700
-    lineHeight: 1
+    fontFamily: '"Inter", "Noto Sans SC", system-ui, sans-serif'
+    fontSize: "clamp(4.25rem, 6.5vw, 6rem)"
+    fontWeight: 800
+    lineHeight: 1.02
+    letterSpacing: "-0.04em"
   headline:
-    fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
-    fontSize: "1.875rem"
-    fontWeight: 600
-    lineHeight: "2.25rem"
+    fontFamily: '"Inter", "Noto Sans SC", system-ui, sans-serif'
+    fontSize: "clamp(2.5rem, 4vw, 3.5rem)"
+    fontWeight: 800
+    lineHeight: 1.08
+    letterSpacing: "-0.035em"
+  editorial:
+    fontFamily: '"Playfair Display", Georgia, serif'
+    fontSize: "clamp(2.7rem, 4.6vw, 4.8rem)"
+    fontWeight: 700
+    lineHeight: 1.08
+    letterSpacing: "-0.03em"
   title:
-    fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
-    fontSize: "1.125rem"
-    fontWeight: 500
-    lineHeight: "1.75rem"
+    fontFamily: '"Inter", "Noto Sans SC", system-ui, sans-serif'
+    fontSize: "clamp(1.55rem, 2.4vw, 2.1rem)"
+    fontWeight: 700
+    lineHeight: 1.12
+    letterSpacing: "-0.025em"
   body:
-    fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
+    fontFamily: '"Inter", "Noto Sans SC", system-ui, sans-serif'
     fontSize: "1rem"
     fontWeight: 400
-    lineHeight: "1.5rem"
+    lineHeight: 1.6
   label:
-    fontFamily: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
-    fontSize: "0.875rem"
-    fontWeight: 400
-    lineHeight: "1.25rem"
+    fontFamily: '"Inter", "Noto Sans SC", system-ui, sans-serif'
+    fontSize: "0.78rem"
+    fontWeight: 700
+    lineHeight: 1.4
+    letterSpacing: "0.08em"
 rounded:
-  inline: "0.25rem"
-  control: "0.375rem"
-  round: "9999px"
+  control: "8px"
+  module: "12px"
+  surface: "14px"
+  pill: "999px"
+  circle: "50%"
 spacing:
-  page-inset: "1rem"
-  item-block: "1.5rem"
-  section-block: "3rem"
-  compact-gap: "0.25rem"
+  compact: "12px"
+  control-inline: "22px"
+  card: "30px"
+  section-desktop: "130px"
+components:
+  button-primary:
+    backgroundColor: "{colors.signal-yellow}"
+    textColor: "{colors.deep-navy}"
+    typography: "{typography.label}"
+    rounded: "{rounded.control}"
+    padding: "0 22px"
+    height: "52px"
+  button-quiet:
+    backgroundColor: "rgba(255, 255, 255, 0.07)"
+    textColor: "{colors.cloud-white}"
+    typography: "{typography.label}"
+    rounded: "{rounded.control}"
+    padding: "0 22px"
+    height: "52px"
+  navigation-shell:
+    backgroundColor: "rgba(0, 27, 72, 0.5)"
+    textColor: "{colors.cloud-white}"
+    rounded: "{rounded.surface}"
+    padding: "12px 18px 12px 24px"
+    height: "68px"
+  reading-route:
+    backgroundColor: "#FFFFFF"
+    textColor: "{colors.deep-navy}"
+    rounded: "{rounded.module}"
+    padding: "24px 28px 28px"
+  destination-card:
+    backgroundColor: "{colors.flight-blue}"
+    textColor: "{colors.cloud-white}"
+    rounded: "{rounded.surface}"
+    padding: "30px"
+  circular-control:
+    backgroundColor: "#FFFFFF"
+    textColor: "{colors.deep-navy}"
+    rounded: "{rounded.circle}"
+    size: "46px"
+  magnetic-cta:
+    backgroundColor: "{colors.signal-yellow}"
+    textColor: "{colors.deep-navy}"
+    rounded: "{rounded.circle}"
+    size: "180px"
 ---
 
 # Design System: 章思哲个人博客
 
 ## Overview
 
-**Creative North Star: “AstroPaper 阅读栏 / The AstroPaper Reading Rail”**
+**Creative North Star: “思想航线 / The Thinking Skyway”**
 
-当前站点不是旧版“编号出版目录”的延续，而是对开源主题 [AstroPaper v5.5.1](https://github.com/satnaing/astro-paper/tree/v5.5.1) 的直接复用与中文化适配。界面与主要交互来自 Sat Naing 及贡献者维护的 AstroPaper，按 MIT License 使用；版本与来源同时记录在 `package.json`、`README.md` 和 `THIRD_PARTY_NOTICES.md`。新增页面与组件应优先沿用上游 AstroPaper 的既有模式，避免重新发明一套品牌视觉。
+这个系统把个人博客塑造成一段可探索的思想航线：深海军蓝构成夜航般的连续世界，山峰、云海与机舱窗口带来电影感纵深，鲜明黄色把阅读入口变成清晰信号。航空只是一种关于探索、坐标与前往下一站的视觉语言；内容始终忠于章思哲本人、真实文章和公开联系方式。
 
-视觉核心是一条克制、居中的等宽阅读栏：接近纸白或蓝黑的连续页面底色，单一主题强调色，细分隔线，以及不加容器装饰的文章条目。桌面预览中，导航、首屏、文章列表与页脚共享同一条 48rem 栏宽和同一左边线，页面靠排版、间距与颜色建立层级，而不是靠海报式大图、营销卡片或装饰背景。
+体验在沉浸与可读之间保持明确秩序。首页以全屏影像和固定玻璃导航建立氛围，但文章入口仍在首屏可见；白色阅读路线模块穿出深色场景，随后以横向目的地、非对称内容网格、真实头像、数据带、编辑引语和浅色联系收束引导访客继续阅读。成品评审的全部实质问题已解决，当前视觉世界可作为后续页面的正式权威。
 
 **Key Characteristics:**
 
-- AstroPaper v5.5.1 原生结构、图标与交互是当前视觉权威。
-- 全站使用系统等宽字体，中文、英文、数字和代码保持一致的技术写作气质。
-- 浅色主题使用蓝色强调，深色主题使用橙色强调；两套主题各自拥有背景、前景、弱化面和边框 token。
-- 桌面采用 `max-w-3xl` 的居中单栏；页面主体不扩展为全宽杂志布局。
-- 文章入口是无卡片底色、无阴影的列表项，标题、日期和摘要顺序清晰。
-- 虚线下划线、波浪活动态和线性图标构成轻量交互语言。
+- 深海军蓝连续画布、电影化山峰影像与机舱窗口共同建立“航线”世界。
+- 信号黄专门标示主要行动、焦点和关键状态；琥珀色只用于阅读路线的出发动作。
+- Inter 承担清晰、现代的中文界面与大标题，Playfair Display 只作为稀疏的编辑性强调。
+- 宽屏容器、大片留白、横向目的地卡与非对称编辑网格形成桌面优先的节奏。
+- 12px / 14px 曲面与圆形控件构成稳定形态语言，不把页面变成同质卡片墙。
+- 动效服务于“穿越、前往、继续探索”，且减少动态模式直接呈现可读终态。
 
 ## Colors
 
-色彩按语义成对切换：背景、前景、强调、弱化面和边框在浅色与深色主题中保持相同职责，不混用两套强调色。
+色彩像夜航仪表：深蓝负责世界与深度，冷白负责信息，黄色与琥珀以低面积、高辨识度标出行动。
 
 ### Primary
 
-- **浅色蓝强调**（`light-accent`）：浅色主题中的文章标题、RSS 图标、悬浮链接、列表标记、焦点轮廓和阅读进度。
-- **深色橙强调**（`dark-accent`）：深色主题中承担完全相同的行动与状态职责。
+- **深海军蓝**（`deep-navy`，#001B48）：全页主画布、深色文字反差与主操作前景，保证品牌世界持续而稳定。
+- **航行蓝**（`flight-blue`，#02457A）：目的地卡、最新文章面板和深色画布上的次级表面。
+
+### Secondary
+
+- **信号黄**（`signal-yellow`，#FFDE17）：主要按钮、焦点轮廓、关键词、图标和统计数字；悬浮使用 `signal-yellow-hover`（#E5C50C）。
+- **航线琥珀**（`route-amber`，#FFB300）：白色阅读路线模块中的提交动作，用于区分“规划路线”和全站主 CTA。
 
 ### Neutral
 
-- **浅色纸面与墨色**（`light-background`、`light-foreground`）：浅色页面的连续底色和正文、标题、图标颜色。
-- **浅色弱化面与分隔线**（`light-muted`、`light-border`）：行内代码、滚动条、表格和区段边界。
-- **深色蓝黑与冷白**（`dark-background`、`dark-foreground`）：深色页面的连续底色和主要内容颜色。
-- **深色弱化面与棕橙分隔线**（`dark-muted`、`dark-border`）：深色模式中的次级表面和结构线。
+- **云层白**（`cloud-white`，#F5F5F7）：深色场景中的正文与标题。
+- **冷雾灰蓝**（`cool-muted`，#9BB1C4）：辅助文案、元数据和弱化说明。
+- **大气细线**（`atmospheric-line`，rgba(255, 255, 255, 0.12)）：玻璃导航、内容网格、卡片与页脚控件的低对比边界。
+- **近云白**（`contact-light`，#F2F4F5）：尾段联系区的明亮反转画布。
 
 ### Named Rules
 
-**The Paired Theme Rule.** 任一颜色都必须通过当前主题的语义变量使用；不要在组件中固定浅色蓝或深色橙，也不要让一个主题借用另一个主题的 token。
+**The Signal, Not Paint Rule.** 信号黄只用于行动、焦点和少数关键强调；不要把它铺成大面积背景或用于普通说明文字。
 
-**The Accent-as-Signal Rule.** 强调色用于链接、当前状态、焦点、代码差异与阅读进度；大面积页面仍由背景色和前景色主导。
+**The One Night Sky Rule.** 首页从英雄区到编辑内容保持一块连续深海军蓝画布；只有阅读路线模块和联系收束允许以浅色面主动穿出。
 
-**The Continuous Canvas Rule.** 页眉、正文、文章条目和页脚共享页面底色。分区用细边框和留白表达，不增加交替色块。
+**The Amber Departure Rule.** 琥珀色只标记阅读路线模块中的“出发”动作，不与全局信号黄争夺主层级。
 
 ## Typography
 
-**Display Font:** 系统等宽字体栈（`ui-monospace` 起始，回退到 SFMono-Regular、Menlo、Monaco、Consolas、Liberation Mono、Courier New 与 `monospace`）
+**Display Font:** Inter（回退至 Noto Sans SC、system-ui、sans-serif）
 
-**Body Font:** 同一系统等宽字体栈
+**Body Font:** Inter（回退至 Noto Sans SC、system-ui、sans-serif）
 
-**Label/Mono Font:** 同一系统等宽字体栈
+**Editorial Accent:** Playfair Display（回退至 Georgia、serif）
 
-**Character:** 页面通过单一等宽字体获得一致的技术记录感。没有另设中文展示字体或衬线正文字体；层级来自字号、字重、斜体、透明度和间距，长文则由 Tailwind Typography 的排版节奏组织。
+**Character:** Inter 提供航空界面般的清晰和高效，粗重、紧字距的大标题带来电影海报的冲击。Playfair Display 只在右侧英雄文案与编辑引语中出现，让克制的衬线节奏像一本旅行杂志，而不是另起一套正文系统。
 
 ### Hierarchy
 
-- **Display**（700，桌面 3rem / 移动端 2.25rem，桌面行高 1）：首页“你好，我是章思哲”的唯一大标题。
-- **Headline**（页面标题通常 600，文章标题 700；桌面 1.875rem / 移动端 1.5rem）：文章列表页、关于页和文章详情页标题。
-- **Section Title**（600，1.5rem，字距略放宽）：“精选文章”“最近文章”等首页分区标题。
-- **Article Entry Title**（500，1.125rem，行高 1.75rem）：文章列表中的强调色标题链接。
-- **Body**（400，1rem，行高 1.5rem）：导航、简介、摘要、日期与页脚；长文由 `.app-prose` 继承同一字体并使用 Typography 插件的内容节奏。
-- **Label**（400，0.875rem，行高 1.25rem）：小尺寸日期、标签、复制代码控件和辅助元数据。
-- **Secondary Tone:** 面包屑、日期和图注通过 `font-light`、斜体或 75%–80% 不透明度弱化，不另增字体家族。
+- **Display**（800，`clamp(4.25rem, 6.5vw, 6rem)`，1.02）：首屏中心主张；移动端收为 `clamp(2.5rem, 13vw, 3.8rem)`。
+- **Headline**（800，`clamp(2.5rem, 4vw, 3.5rem)`，1.08）：区段主标题，保持宽屏、短行和强层级。
+- **Editorial**（700，`clamp(2.7rem, 4.6vw, 4.8rem)`，1.08）：编辑引语和稀疏的英文氛围文案。
+- **Title**（700，`clamp(1.55rem, 2.4vw, 2.1rem)`，1.12）：目的地卡和文章面板标题。
+- **Body**（400，1rem，1.6）：介绍、摘要和主要说明；长段落通常限制在 50–62ch。
+- **Label**（700，0.78rem，0.08em）：元数据、路线标签和卡片眉题；英文可使用大写，中文保持自然字形。
 
 ### Named Rules
 
-**The One-Mono-Family Rule.** 界面文字、中文正文、元数据和代码共享系统等宽字体；只有第三方搜索结果中的嵌套提示符允许使用 `system-ui`。
+**The Editorial Accent Rule.** Playfair Display 只用于独立的编辑性短句，不用于导航、按钮、元数据或中文长正文。
 
-**The Modest Scale Rule.** 除首页首句和 404 数字外，页面标题保持 1.5–1.875rem 的紧凑尺度。不要把文章标题扩展成占满视口的海报字。
+**The Bold Horizon Rule.** 大标题用粗重字重、紧字距和短行建立地平线般的力量；不要用描边、渐变字或多余字体效果制造层级。
 
 ## Layout
 
-全站的基础容器是居中的 `max-w-3xl` 阅读栏：外宽上限 48rem，宽度为 100%，左右各有 1rem 内边距。桌面实测视口约 1490px 时，外栏宽 768px、可用内容宽约 736px；页眉分隔线、主内容和页脚分隔线严格共线。正文、文章详情和关于页继续使用同一宽度，不建立额外的宽屏侧栏。
+桌面基础容器为 `min(1280px, calc(100vw - 96px))`，固定玻璃导航略宽至 `min(1380px, calc(100% - 48px))`。首屏占满 100svh（最小 680px），山峰视频、深蓝遮罩、中心文案和覆盖全画面的机舱窗口共用同一舞台；白色阅读路线模块以 -72px 上移量压在首屏末端，让真实阅读入口在沉浸场景结束前出现。
 
-首页按自然文档流垂直展开：页眉、介绍区、精选/最近文章区、全部文章入口与页脚。介绍区使用上下留白和底边框；内容分区通常以上方 3rem、下方 1.5rem 的节奏分隔。文章详情同样是单栏，标题与元数据之后进入 `.app-prose`，底部依次出现标签、返回顶部、分享和上一篇/下一篇。
+主体不是等宽卡片队列。目的地以横向滚动的大幅卡展开；写作价值使用 1.18 / 0.82 的非对称网格，首项跨两行；关于区以 0.95 / 1.05 的文案—头像组合呈现；统计带为四等分；编辑引语与最新文章面板采用 1 / 1 双栏。常规区段桌面上下留白为 130px，关于、旅程等叙事段落可扩大到 160px。
 
 ### Responsive Structure
 
-- **默认 / `<640px`:** 阅读栏保持满宽并保留 1rem 安全内边距。导航折叠为菜单按钮；文字链接列表默认隐藏，展开后成为 11rem 的两列网格。文章入口仍为单列；社交区、页脚版权和上一篇/下一篇纵向堆叠。首页 Display 收至 2.25rem，页面标题收至 1.5rem。
-- **`sm` / `≥640px`:** 页眉改为水平布局，站点名与文章、标签、关于、归档、搜索、主题开关同排；导航项使用紧凑横向间距。页脚改为版权与社交链接两端排列，上一篇/下一篇使用两列，日期可回到 1rem。
-- **`md` / `≥768px`:** 返回顶部控件从固定的 56px 圆形浮钮变为文内粘性紧凑控件；文章标题后的锚点默认隐藏，仅在标题悬浮或锚点聚焦时显示。
-- **Overflow:** 长链接允许断行；表格中的代码在小屏可强制断词，列表裁切横向溢出，代码块保留自身滚动与聚焦边界。
+- **桌面 / >1024px:** 保持 1280px 宽屏容器、完整固定导航、横向目的地卡、非对称体验网格和双栏关于/旅程构图。
+- **紧凑桌面与平板 / ≤1024px:** 容器变为 `min(100% - 48px, 940px)`；阅读路线重排为四列两行，卡片宽度扩至约 45vw，文案与图像间距收紧。
+- **移动 / ≤768px:** 容器变为 `calc(100% - 28px)`；导航只保留品牌、文章和联系；阅读路线改为纵向字段；卡片宽 84vw；体验、关于、旅程和联系区全部按 DOM 顺序单列；统计改为 2×2；区段留白收至约 88–100px。
 
-**The Reading Rail Rule.** 新页面的主内容默认使用同一居中 48rem 阅读栏；只有内容本身确实需要更宽的图表或媒体时，才可局部突破，而不是扩大整个站点外壳。
+**The Visible Reading Route Rule.** 无论画面多沉浸，真实文章入口必须在首屏内或首屏末端清晰露出，不能让访客先穿过纯装饰性序幕。
+
+**The Editorial Asymmetry Rule.** 桌面用跨行、偏重列和横向滚动创造节奏；移动端按语义顺序收成单列，不维持会压缩文字的桌面构图。
 
 ## Elevation & Depth
 
-核心阅读界面是平面的。页眉、区段、文章正文与页脚依靠 1px 语义边框、虚线分隔、透明度和垂直留白建立层级，文章条目没有背景卡、描边框或阴影。唯一显著抬升是移动端返回顶部按钮使用圆形底、`shadow-xl` 和环形阅读进度；到 `md` 断点后取消阴影并变为带轻微背景透明度和模糊的文内控件。跳到正文链接也可使用轻微背景模糊，以便从页面上方浮现时保持可读。
+系统以选择性抬升而非普遍阴影建立深度。视频、遮罩、机舱窗口和前景文字形成电影式空间；固定导航使用半透明深蓝与 12px 背景模糊，阅读路线模块以强环境阴影从英雄区中浮出。普通内容网格靠色调、细线和留白分层，目的地卡以内嵌图像渐变表达深度，不额外悬浮成白色卡片。
 
-**The Flat Reading Rule.** 内容层级默认平面化；阴影只属于暂时覆盖内容的实用控件，不用于文章列表、导航或普通内容容器。
+### Shadow Vocabulary
+
+- **Glass Navigation**（`0 12px 34px rgba(0, 13, 35, 0.22)`）：固定导航从影像背景中保持可读。
+- **Reading Route Lift**（`0 18px 56px rgba(0, 10, 28, 0.28)`）：白色阅读路线模块跨越英雄和正文时的主要结构阴影。
+- **Hero Text Atmosphere**（`0 18px 48px rgba(0, 20, 52, 0.32)`）：只用于首屏主标题抵抗复杂山景。
+- **Magnetic CTA Glow**（`0 18px 45px rgba(188, 154, 0, 0.24)`）：浅色联系区中黄色圆形 CTA 的暖色环境光。
+
+### Named Rules
+
+**The Lift Only at Crossings Rule.** 阴影只出现在跨越复杂影像、重叠两个区段或需要独立操控的元素上；普通文章与信息网格保持平面。
 
 ## Shapes
 
-主要页面结构、文章条目、导航与分隔线均为直角。交互识别更多来自虚线下划线、波浪形活动导航下划线、1–2px 边线与线性 SVG 图标，而不是圆角卡片。局部圆角是功能性的：行内代码使用轻微圆角（`inline`），搜索输入和桌面返回顶部控件使用 0.375rem（`control`），移动返回顶部按钮使用完全圆形（`round`）。图片默认有 1px 主题边框；关于页显式移除图片边框。
+形态语言由三档曲率组成：主要按钮使用 8px 的紧凑圆角，阅读路线使用 12px，玻璃导航、目的地卡、头像容器与文章面板使用 14px。它们让大面积影像和深色表面保持现代而克制，不制造柔软玩具感。导航联系动作使用 999px 胶囊；交换、轮播、社交和最终 CTA 使用完整圆形，圆形只属于明确的操作或指标，不用于普通内容容器。
+
+**The Surface-or-Control Rule.** 12px / 14px 用于承载内容的表面，8px 用于按钮，完整圆形用于单一动作；不要随意混用曲率或给每段文字加圆角底板。
 
 ## Components
 
-### Navigation
+### Fixed Glass Navigation
 
-- **Desktop:** 阅读栏顶部水平排列站点名与导航；站点名为 1.5rem、600 字重，底部用 1px 主题边框收束。文字链接为中等字重，悬浮转强调色；当前栏目使用 2px 波浪下划线和 0.25rem 偏移。
-- **Mobile:** 站点名保持左侧，菜单按钮在右侧。按钮同步维护 `aria-expanded`、`aria-controls` 和“打开菜单 / 关闭菜单”标签；展开内容以中文文字为主，搜索与主题开关保留图标。
-- **Utilities:** 归档、搜索和主题控件使用无填充线性图标；移动端扩大内边距，主题按钮达到 48px 方形，桌面收为 32px。
+- **Shape:** 14px 曲面、1px 大气细线；桌面最小高度 68px，距视口顶部 18px。
+- **Material:** 50% 透明深海军蓝、12px 背景模糊和低位环境阴影。
+- **Typography:** 品牌 1.28rem / 800；导航 0.86rem / 600。
+- **State:** 普通链接悬浮时黄色下划线由左展开；联系使用黄色胶囊。移动端高度收至 58px，只保留品牌、文章与联系。
 
-### Article Entry
+### Buttons
 
-- **Structure:** 每篇文章是具有 1.5rem 上下间距的列表项，顺序为标题链接、日期、摘要。
-- **Title:** 1.125rem、500 字重、主题强调色；默认不画容器，悬浮时出现虚线下划线，键盘聚焦时以全局虚线焦点轮廓替代下划线。
-- **Metadata:** 日期与日历图标使用约 80% 不透明度；小尺寸为 0.875rem，文章详情中的大尺寸在 `sm` 断点恢复到 1rem。
-- **Body:** 摘要直接落在页面底色上，不使用背景、描边、圆角、缩略图或“阅读更多”按钮。
+- **Shape:** 8px 圆角、至少 52px 高，左右 22px 内边距。
+- **Primary:** 信号黄底、深海军蓝字，悬浮上移 2px并切换至较深黄色。
+- **Quiet:** 7% 白色透明底、云层白文字、轻微背景模糊，以细白边界保持在影像上可读。
+- **Focus:** 所有链接与按钮使用 3px 信号黄实线轮廓和 4px 外偏移。
 
-### Theme Control
+### Reading Route Module
 
-- **Resolution order:** 先读取 `localStorage`，若未保存且未设置固定主主题，则跟随 `prefers-color-scheme`。
-- **Behavior:** 主题值写入根元素 `data-theme`，在首屏脚本阶段提前应用以避免闪白；切换时保存偏好，并同步更新主题按钮的 `aria-label` 与浏览器 `theme-color`。
-- **Feedback:** 月亮与太阳图标通过旋转和缩放交替；系统主题改变时会同步更新站点主题。
+- **Surface:** 纯白底、深海军蓝文字、12px 圆角，以主结构阴影压在英雄区末端。
+- **Layout:** 桌面为五组信息加一个动作的单行网格；字段间用冷灰细线区分；≤1024px 折成两行，≤768px 变为纵向字段。
+- **Controls:** 38px 圆形交换按钮悬浮旋转 180°；“开始阅读”使用琥珀底，悬浮转信号黄。
 
-### Links and Tags
+### Destination / Article Cards
 
-- **Body links:** 正文链接为前景色配虚线下划线，悬浮转强调色；长 URL 允许断行。
-- **Tags:** 标签前置井号图标并使用 2px 虚线底边；悬浮时向上移动 0.125rem，同时边框与文字转强调色。
-- **Icon links:** 社交与分享链接使用线性图标，悬浮轻微旋转 6deg；文本标签保留给屏幕阅读器。
+- **Corner Style:** 14px，内容裁切在表面内。
+- **Background:** 航行蓝及同一深蓝家族的少量变体；有图像时使用从透明到深海军蓝的底部渐变保证文字对比。
+- **Internal Padding:** 30px；卡片高约 440px，标题与说明靠底部组织。
+- **State:** 图片在 700ms 中轻微放大，箭头向右上移动；卡片本身不做夸张浮起。
 
-### Long-form Content
+### Editorial Experience Grid
 
-- **Typography:** `.app-prose` 覆盖 Tailwind Typography，使标题、正文、列表、表格和代码统一使用主题前景色。
-- **Code:** 行内代码置于 75% 弱化色背景和轻微圆角中；代码块使用 Shiki 的明暗双主题颜色，支持新增、删除、行高亮与词高亮。
-- **Structure:** 列表标记使用强调色，引用以强调色左边线和约 80% 不透明度区分，图片与表格使用主题边框，水平线使用主题边框。
-- **Article utilities:** 顶部 4px 阅读进度条使用强调色；二级及以下标题自动获得可复制锚点；代码块在悬浮或聚焦时显示复制控件。
+- **Structure:** 一项跨两行的主叙事与两项辅助叙事组成非对称网格，细线直接分割连续深色画布。
+- **State:** 悬浮上移 10px、表面从 2.5% 白提高到 5% 白，黄色图标轻微放大并旋转，右上角柔光渐显。
+- **Mobile:** 三项按语义顺序堆叠，主项不再跨行。
 
-### Back to Top
+### About Portrait
 
-- **Mobile:** 固定在右下角的 56px 圆形按钮，外圈使用圆锥渐变显示阅读进度；页面滚动超过 30% 后以 500ms 位移和透明度过渡出现。
-- **Desktop:** 在 `md` 断点变为正文右侧的紧凑粘性控件，去除阴影并显示“回到顶部”文字。
+- **Shape:** 14px 裁切的高幅真实头像，桌面高 650px，移动端高 420px。
+- **Depth:** 底部深蓝渐变保护署名；图像随滚动在 -7% 至 7% 间产生克制视差。
+- **Content:** 只使用真实 GitHub 头像，不以库存人物或虚构履历填充画面。
 
-### Accessibility
+### Magnetic CTA
 
-- 页面开头提供“跳到正文”链接，平时位于视口上方，键盘聚焦时进入可视区。
-- 所有链接和按钮使用 2px 虚线强调色 `focus-visible` 轮廓和 1px 外偏移；正文链接聚焦时去除下划线，避免与轮廓叠加。
-- 导航、面包屑、分页与文章使用语义元素；当前面包屑使用 `aria-current="page"`，分页有可读标签，禁用分页项同时具备 `aria-disabled` 与视觉弱化。
-- 纯图标操作提供 `title`、`aria-label` 或屏幕阅读器专用文本；主题按钮使用 `aria-live="polite"`，移动菜单公开展开状态。
-- 明暗主题根据系统偏好初始化并保持高对比的前景/背景组合；选中文本反转为强调色底和页面背景色文字。
-- 当前源码启用平滑滚动和若干过渡，但没有显式的 `prefers-reduced-motion` 覆盖。新增动画时应补充减少动态分支，且不能让动画成为理解状态的唯一方式。
+- **Shape:** 桌面 180px、移动端 140px 的完整圆形。
+- **Color:** 信号黄底、深海军蓝字与暖色环境阴影，落在近云白联系区上。
+- **Behavior:** 指针区域内最多按相对位移的 16% 跟随，离开后弹性归位；减少动态模式完全停止位移。
+
+### Motion & Reduced Motion
+
+- **Cinematic Hero:** GSAP 将英雄区固定约 110% 滚动距离，机舱窗口从 1.05 放大至 2.15，同时编辑文案和中心文案淡出；静止时窗口以 3s `sine.inOut` 上下浮动 15px。
+- **Smooth Travel:** Lenis 使用 1.2s 指数缓动；卡片、按钮和网格状态通常使用 180–260ms，图像放大使用 700ms 的强出缓动。
+- **Portrait & Magnet:** 头像以滚动视差增强纵深，最终 CTA 使用 `power3.out` 跟随与弹性归位。
+- **Fallback:** `prefers-reduced-motion: reduce` 不初始化 Lenis、固定缩放、浮动、头像视差或磁吸；CSS 动画与过渡缩至 0.01ms，并把机舱窗口和头像直接置于最终可读状态。
 
 ## Do's and Don'ts
 
 ### Do:
 
-- **Do** 直接复用 AstroPaper v5.5.1 的现有组件、线性图标和交互模式，再做必要的中文内容适配。
-- **Do** 让所有标准页面沿用居中的 `max-w-3xl` 阅读栏和 1rem 页面内边距。
-- **Do** 通过语义主题变量使用颜色，确保浅色蓝与深色橙承担同一强调职责。
-- **Do** 保持系统等宽字体贯穿导航、正文、元数据和代码。
-- **Do** 把文章列表写成标题—日期—摘要的平面条目，并保留虚线链接、细边框和稳定垂直节奏。
-- **Do** 同时验证 `<640px`、`≥640px` 和 `≥768px` 的导航、页脚、文章工具与长内容换行。
-- **Do** 保留跳转正文、清晰焦点、可读图标标签、菜单展开状态和主题状态同步。
+- **Do** 用深海军蓝、航行蓝、冷白和稀疏信号色维持统一的夜航世界。
+- **Do** 让作者身份、真实文章入口和可验证联系方式始终优先于航空装饰。
+- **Do** 在桌面使用宽容器、横向卡片和非对称构图，在 1024px / 768px 断点按语义顺序重排。
+- **Do** 把 Playfair Display 限制在少量编辑强调，把中文正文与操作保持为清晰的 Inter / Noto Sans SC。
+- **Do** 为视频、滚动穿越、视差和磁吸提供完整的减少动态终态，并保留明显键盘焦点。
+- **Do** 让影像与动画引导访客前往内容，而不是挡住内容。
 
 ### Don't:
 
-- **Don't** 恢复旧版编号目录、超大目录号、信号波形、横向卡组、钴蓝/酸性青柠配色或 League Gothic / Noto Sans SC 字体组合。
-- **Don't** 把文章入口包成带阴影、圆角、背景色或大图的营销卡片。
-- **Don't** 把桌面阅读栏拉成全宽多栏首页，或让页眉、正文和页脚失去共同左边线。
-- **Don't** 在组件内硬编码主题色，或让强调色铺满大面积背景。
-- **Don't** 仅靠颜色、悬浮或动画表达当前状态；保留文字、图标、下划线、ARIA 与键盘焦点的等价信息。
-- **Don't** 为“品牌感”引入第二套展示字体、玻璃拟态、渐变背景或与 AstroPaper 无关的装饰系统。
+- **Don't** 恢复 AstroPaper 的居中等宽阅读栏、双主题橙蓝系统或纯文本列表视觉。
+- **Don't** 把航空语言变成虚构订票、机组、航班、项目成果、评价或影响力数据。
+- **Don't** 用大面积黄色、任意渐变字、过多玻璃面或随处投影削弱深蓝世界的克制感。
+- **Don't** 把所有内容做成相同尺寸、相同圆角、相同阴影的卡片墙。
+- **Don't** 在移动端强保留桌面双栏和跨行构图，或隐藏首屏真实阅读入口。
+- **Don't** 让动效成为理解导航、阅读路径或内容状态的唯一方式。

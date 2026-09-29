@@ -2,7 +2,7 @@ import { spawn } from 'node:child_process';
 import { mkdir, writeFile } from 'node:fs/promises';
 
 const edge = 'C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe';
-const targetUrl = 'http://127.0.0.1:4173/';
+const targetUrl = 'http://127.0.0.1:4321/';
 const reviewDir = 'D:\\个人博客\\.impeccable\\review';
 
 async function capture({ name, port, profile, width, height, mobile }) {
@@ -62,7 +62,7 @@ async function capture({ name, port, profile, width, height, mobile }) {
     features: [{ name: 'prefers-reduced-motion', value: 'reduce' }],
   });
   await command('Page.navigate', { url: targetUrl });
-  await new Promise((resolve) => setTimeout(resolve, 1500));
+  await new Promise((resolve) => setTimeout(resolve, 2500));
   const screenshot = await command('Page.captureScreenshot', {
     format: 'png',
     fromSurface: true,
@@ -79,8 +79,8 @@ await capture({
   name: 'desktop',
   port: 9341,
   profile: 'D:\\个人博客\\.impeccable\\edge-desktop',
-  width: 1536,
-  height: 1024,
+  width: 1440,
+  height: 900,
   mobile: false,
 });
 

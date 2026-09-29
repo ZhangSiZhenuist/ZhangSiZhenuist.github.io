@@ -1,134 +1,318 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-04T10:12:03+08:00",
+  "generatedAt": "2026-09-29T14:34:14.6470761+08:00",
   "title": "Design System: 章思哲个人博客",
   "extensions": {
     "colorMeta": {
-      "primary-teal": {
+      "deep-navy": {
         "role": "primary",
-        "displayName": "深青绿",
-        "canonical": "#227a73",
-        "tonalRamp": ["#0c2422", "#123d39", "#185650", "#227a73", "#4b958f", "#7bb2ad", "#afd1cd", "#e5f1ef"]
+        "displayName": "深海军蓝",
+        "canonical": "#001B48",
+        "tonalRamp": ["#000713", "#000F28", "#001B48", "#173960", "#385A7B", "#66809B", "#A0B4C6", "#E7EDF2"]
       },
-      "secondary-red": {
+      "flight-blue": {
+        "role": "primary",
+        "displayName": "航行蓝",
+        "canonical": "#02457A",
+        "tonalRamp": ["#00101F", "#002C50", "#02457A", "#24628E", "#4B81A5", "#78A2BE", "#AEC6D7", "#E6F0F5"]
+      },
+      "cloud-white": {
+        "role": "neutral",
+        "displayName": "云层白",
+        "canonical": "#F5F5F7",
+        "tonalRamp": ["#22232A", "#3E3F47", "#5D5E67", "#7E7F88", "#A2A3AB", "#C3C4CA", "#DFE0E4", "#F5F5F7"]
+      },
+      "cool-muted": {
+        "role": "neutral",
+        "displayName": "冷雾灰蓝",
+        "canonical": "#9BB1C4",
+        "tonalRamp": ["#14212B", "#273A49", "#3E5669", "#5B7489", "#7894AA", "#9BB1C4", "#C1D0DC", "#EAF0F4"]
+      },
+      "signal-yellow": {
         "role": "secondary",
-        "displayName": "氧化红",
-        "canonical": "#af3029",
-        "tonalRamp": ["#34110f", "#571a17", "#7a231f", "#af3029", "#c65d57", "#da8b86", "#eabbb7", "#f8e9e7"]
+        "displayName": "信号黄",
+        "canonical": "#FFDE17",
+        "tonalRamp": ["#312900", "#554800", "#7B6900", "#A78E00", "#D2B600", "#FFDE17", "#FFEA72", "#FFF8C8"]
       },
-      "paper": {
-        "role": "neutral",
-        "displayName": "暖纸",
-        "canonical": "#fffcf0",
-        "tonalRamp": ["#28271f", "#464438", "#656154", "#858073", "#a6a092", "#c7c1b4", "#e5dfd2", "#fffcf0"]
+      "signal-yellow-hover": {
+        "role": "secondary",
+        "displayName": "信号黄悬浮",
+        "canonical": "#E5C50C",
+        "tonalRamp": ["#2C2500", "#4D4100", "#725F00", "#9A8200", "#C1A500", "#E5C50C", "#F4DE68", "#FFF6C4"]
       },
-      "ink": {
-        "role": "neutral",
-        "displayName": "深墨",
-        "canonical": "#1c1b1a",
-        "tonalRamp": ["#1c1b1a", "#343230", "#504d49", "#706c66", "#928d85", "#b5afa5", "#d8d2c6", "#f5f1e7"]
+      "route-amber": {
+        "role": "secondary",
+        "displayName": "航线琥珀",
+        "canonical": "#FFB300",
+        "tonalRamp": ["#321E00", "#593600", "#815000", "#AC6C00", "#D88C00", "#FFB300", "#FFD064", "#FFECC2"]
       },
-      "muted-ink": {
+      "atmospheric-line": {
         "role": "neutral",
-        "displayName": "风化灰墨",
-        "canonical": "#6f6b62",
-        "tonalRamp": ["#25231f", "#3b3933", "#535049", "#6f6b62", "#908b81", "#b2aca1", "#d4cec2", "#f1ede3"]
+        "displayName": "大气细线",
+        "canonical": "rgba(255, 255, 255, 0.12)",
+        "tonalRamp": ["rgba(255,255,255,0.04)", "rgba(255,255,255,0.08)", "rgba(255,255,255,0.12)", "rgba(255,255,255,0.18)", "rgba(255,255,255,0.26)", "rgba(255,255,255,0.38)", "rgba(255,255,255,0.58)", "rgba(255,255,255,0.82)"]
       },
-      "hairline": {
+      "contact-light": {
         "role": "neutral",
-        "displayName": "发丝灰",
-        "canonical": "#dad6cc",
-        "tonalRamp": ["#2b2925", "#48453f", "#66625a", "#858078", "#a6a198", "#c7c2b8", "#dad6cc", "#f5f1e8"]
+        "displayName": "近云白",
+        "canonical": "#F2F4F5",
+        "tonalRamp": ["#202427", "#3B4145", "#596064", "#798084", "#9CA3A7", "#BEC4C7", "#DDE1E3", "#F2F4F5"]
       }
     },
     "typographyMeta": {
-      "display": { "displayName": "首页问候", "purpose": "仅用于首屏作者问候。" },
-      "headline": { "displayName": "文章主标题", "purpose": "长文开始处的最高阅读层级。" },
-      "title": { "displayName": "文章列表标题", "purpose": "文章入口的主要扫描目标。" },
-      "body": { "displayName": "正文", "purpose": "导航、说明、摘要和正文内容。" },
-      "label": { "displayName": "编辑标签", "purpose": "文章类别和日期组合。" }
+      "display": {
+        "displayName": "电影主标题",
+        "purpose": "首屏中心主张，以粗重紧字距建立清晰地平线。"
+      },
+      "headline": {
+        "displayName": "区段标题",
+        "purpose": "宽屏内容段落的主要扫描层级。"
+      },
+      "editorial": {
+        "displayName": "编辑强调",
+        "purpose": "只用于独立引语和稀疏英文氛围文案。"
+      },
+      "title": {
+        "displayName": "目的地标题",
+        "purpose": "目的地卡和文章面板的内容入口。"
+      },
+      "body": {
+        "displayName": "正文",
+        "purpose": "介绍、摘要和主要说明文字。"
+      },
+      "label": {
+        "displayName": "航线标签",
+        "purpose": "路线字段、元数据、卡片眉题与紧凑操作。"
+      }
     },
-    "shadows": [],
+    "shadows": [
+      {
+        "name": "glass-navigation",
+        "value": "0 12px 34px rgba(0, 13, 35, 0.22)",
+        "purpose": "固定导航从复杂山景中保持可读。"
+      },
+      {
+        "name": "reading-route-lift",
+        "value": "0 18px 56px rgba(0, 10, 28, 0.28)",
+        "purpose": "白色阅读路线模块跨越英雄与正文的结构抬升。"
+      },
+      {
+        "name": "hero-text-atmosphere",
+        "value": "0 18px 48px rgba(0, 20, 52, 0.32)",
+        "purpose": "首屏主标题在复杂影像上的局部对比保护。"
+      },
+      {
+        "name": "magnetic-cta-glow",
+        "value": "0 18px 45px rgba(188, 154, 0, 0.24)",
+        "purpose": "浅色联系区中黄色圆形 CTA 的暖色环境光。"
+      }
+    ],
     "motion": [
-      { "name": "reveal-up", "value": "520ms cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "首屏内容轻微上移淡入。" },
-      { "name": "state-color", "value": "180ms ease", "purpose": "导航和联系链接的颜色状态。" },
-      { "name": "title-underline", "value": "220ms ease", "purpose": "文章标题下划线从左展开。" },
-      { "name": "magnet-enter", "value": "180ms ease-out", "purpose": "桌面指针靠近阅读动作时的轻微跟随。" },
-      { "name": "magnet-return", "value": "420ms ease-in-out", "purpose": "阅读动作平稳回到原位。" }
+      {
+        "name": "state-fast",
+        "value": "180ms ease",
+        "purpose": "跳转链接、页脚图标与基础颜色状态。"
+      },
+      {
+        "name": "state-standard",
+        "value": "220ms ease",
+        "purpose": "按钮上移、导航下划线和交换控件。"
+      },
+      {
+        "name": "surface-response",
+        "value": "260ms ease",
+        "purpose": "编辑网格和文章面板的悬浮响应。"
+      },
+      {
+        "name": "image-reveal",
+        "value": "700ms cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "目的地卡图像的克制放大。"
+      },
+      {
+        "name": "scroll-cue",
+        "value": "1.6s ease-in-out infinite",
+        "purpose": "首屏向下提示的轻柔往返。"
+      },
+      {
+        "name": "hero-pin-zoom",
+        "value": "GSAP ScrollTrigger: end +=110%, scrub 0.8, scale 1.05→2.15",
+        "purpose": "固定英雄区并穿过机舱窗口，同时淡出两组文案。"
+      },
+      {
+        "name": "window-bob",
+        "value": "3s sine.inOut, y 0→-15px, yoyo infinite",
+        "purpose": "非滚动状态下保持机舱窗口的呼吸感。"
+      },
+      {
+        "name": "smooth-travel",
+        "value": "Lenis duration 1.2, exponential ease-out",
+        "purpose": "统一长页滚动的旅行感。"
+      },
+      {
+        "name": "portrait-parallax",
+        "value": "GSAP yPercent -7→7, scrub true",
+        "purpose": "真实头像在裁切框内建立轻微纵深。"
+      },
+      {
+        "name": "magnetic-follow",
+        "value": "450ms power3.out; return 600ms elastic.out(1, 0.4)",
+        "purpose": "最终圆形 CTA 在指针区域内跟随并弹性归位。"
+      },
+      {
+        "name": "reduced-motion-final-state",
+        "value": "0.01ms transitions; no Lenis, pin, bob, parallax, or magnet",
+        "purpose": "减少动态偏好下直接呈现完整、可读、可操作的终态。"
+      }
     ],
     "breakpoints": [
-      { "name": "stack", "value": "760px" }
+      {
+        "name": "compact-desktop",
+        "value": "1024px"
+      },
+      {
+        "name": "mobile",
+        "value": "768px"
+      }
     ]
   },
   "components": [
     {
-      "name": "Author Wordmark",
+      "name": "Fixed Glass Navigation",
       "kind": "nav",
-      "refersTo": "navigation-link",
-      "description": "页眉中的作者名称与氧化红身份方点。",
-      "html": "<a class=\"ds-wordmark\" href=\"#top\"><span class=\"ds-wordmark-dot\"></span><span>章思哲</span></a>",
-      "css": ".ds-wordmark { display:inline-flex; align-items:center; gap:.9rem; min-height:44px; color:var(--ink,#1c1b1a); font-family:\"Noto Sans SC\",\"Microsoft YaHei\",\"PingFang SC\",system-ui,sans-serif; font-size:1.4rem; font-weight:700; letter-spacing:-.045em; text-decoration:none; } .ds-wordmark-dot { width:.68rem; height:.68rem; background:var(--red,#af3029); } .ds-wordmark:focus-visible { outline:3px solid color-mix(in srgb,var(--teal,#227a73) 55%,transparent); outline-offset:5px; }"
+      "refersTo": "navigation-shell",
+      "description": "覆盖英雄影像的固定深蓝玻璃导航，黄色下划线与胶囊联系动作负责状态。",
+      "html": "<header class=\"ds-glass-nav\"><a class=\"ds-brand\" href=\"#\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M22 2 9.6 14.4M22 2l-7 20-4-8-8-4 19-8Z\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span>章思哲</span></a><nav><a href=\"#\">写作</a><a href=\"#\">关于</a><a class=\"ds-nav-cta\" href=\"#\">联系</a></nav></header>",
+      "css": ".ds-glass-nav { display:flex; min-height:68px; align-items:center; justify-content:space-between; gap:24px; padding:12px 18px 12px 24px; border:1px solid var(--skyway-line,rgba(255,255,255,.12)); border-radius:14px; background:rgba(0,27,72,.5); box-shadow:0 12px 34px rgba(0,13,35,.22); backdrop-filter:blur(12px); color:var(--skyway-white,#f5f5f7); font-family:\"Inter\",\"Noto Sans SC\",system-ui,sans-serif; } .ds-brand,.ds-glass-nav nav,.ds-glass-nav nav a { display:inline-flex; align-items:center; } .ds-brand { gap:10px; color:inherit; font-size:1.28rem; font-weight:800; letter-spacing:-.02em; text-decoration:none; } .ds-brand svg { width:28px; height:28px; transform:rotate(-12deg); } .ds-glass-nav nav { gap:28px; } .ds-glass-nav nav a { position:relative; min-height:44px; color:rgba(245,245,247,.88); font-size:.86rem; font-weight:600; text-decoration:none; } .ds-glass-nav nav a:not(.ds-nav-cta)::after { content:\"\"; position:absolute; right:0; bottom:2px; left:0; height:2px; transform:scaleX(0); transform-origin:left; background:var(--skyway-yellow,#ffde17); transition:transform 220ms ease; } .ds-glass-nav nav a:hover::after { transform:scaleX(1); } .ds-nav-cta { min-height:auto!important; padding:10px 17px; border-radius:999px; background:var(--skyway-yellow,#ffde17); color:var(--skyway-navy,#001b48)!important; } .ds-glass-nav a:focus-visible { outline:3px solid var(--skyway-yellow,#ffde17); outline-offset:4px; }"
     },
     {
-      "name": "Navigation Link",
-      "kind": "nav",
-      "refersTo": "navigation-link",
-      "description": "低噪声页眉链接；当前项由深青绿线定位。",
-      "html": "<a class=\"ds-nav-link ds-nav-link-active\" href=\"#writing\">文章</a>",
-      "css": ".ds-nav-link { position:relative; display:inline-flex; align-items:center; min-height:44px; color:#363330; font-family:\"Noto Sans SC\",\"Microsoft YaHei\",\"PingFang SC\",system-ui,sans-serif; font-size:1rem; text-decoration:none; transition:color 180ms ease; } .ds-nav-link:hover { color:var(--red,#af3029); } .ds-nav-link-active::after { content:\"\"; position:absolute; left:0; right:0; bottom:-1rem; height:3px; background:var(--teal,#227a73); } .ds-nav-link:focus-visible { outline:3px solid color-mix(in srgb,var(--teal,#227a73) 55%,transparent); outline-offset:5px; }"
-    },
-    {
-      "name": "Article Row",
-      "kind": "card",
-      "refersTo": "article-row",
-      "description": "无卡片容器的排版式最新文章入口。",
-      "html": "<article class=\"ds-article-row\"><time>2026.09.03</time><div><p class=\"ds-category\">随笔</p><h3><a href=\"#\">从这里开始</a></h3><p class=\"ds-excerpt\">欢迎来到我的个人博客。这里将收录学习笔记、项目复盘，以及那些值得反复琢磨的问题。</p></div></article>",
-      "css": ".ds-article-row { display:grid; grid-template-columns:8rem minmax(0,1fr); gap:2rem; align-items:start; padding:2.7rem 0; border-top:1px solid var(--rule,#dad6cc); border-bottom:1px solid var(--rule,#dad6cc); background:var(--paper,#fffcf0); color:var(--ink,#1c1b1a); font-family:\"Noto Sans SC\",\"Microsoft YaHei\",\"PingFang SC\",system-ui,sans-serif; } .ds-article-row time,.ds-excerpt { color:var(--muted,#6f6b62); } .ds-category { margin:0 0 .6rem; color:var(--red,#af3029); font-weight:650; } .ds-article-row h3 { margin:0; font-size:2.25rem; line-height:1.15; letter-spacing:-.05em; } .ds-article-row h3 a { color:inherit; text-decoration:none; } .ds-article-row h3 a:hover,.ds-article-row h3 a:focus-visible { text-decoration:underline; text-decoration-color:var(--teal,#227a73); text-underline-offset:.2em; } .ds-excerpt { margin:.9rem 0 0; line-height:1.65; }"
-    },
-    {
-      "name": "Article Action",
+      "name": "Primary Reading Button",
       "kind": "button",
-      "refersTo": "article-action",
-      "description": "文章列表中唯一的主动作，像编辑标注而不是填色按钮。",
-      "html": "<a class=\"ds-article-action\" href=\"#\">阅读文章 <svg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" aria-hidden=\"true\"><path d=\"M5 12h14M13 6l6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
-      "css": ".ds-article-action { display:inline-flex; align-items:center; gap:1rem; min-height:48px; color:var(--teal,#227a73); font-family:\"Noto Sans SC\",\"Microsoft YaHei\",\"PingFang SC\",system-ui,sans-serif; font-size:1.05rem; font-weight:650; border-bottom:2px solid currentColor; text-decoration:none; transition:color 180ms ease,transform 180ms ease-out; } .ds-article-action:hover { color:var(--red,#af3029); transform:translateY(-1px); } .ds-article-action:active { transform:translateY(0); } .ds-article-action:focus-visible { outline:3px solid color-mix(in srgb,var(--teal,#227a73) 55%,transparent); outline-offset:5px; }"
+      "refersTo": "button-primary",
+      "description": "英雄区的主要文章入口，以信号黄在复杂影像上形成唯一强动作。",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">开始阅读 <svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-btn-primary { display:inline-flex; min-height:52px; align-items:center; justify-content:center; gap:10px; padding:0 22px; border:1px solid var(--skyway-yellow,#ffde17); border-radius:8px; background:var(--skyway-yellow,#ffde17); color:var(--skyway-navy,#001b48); font-family:\"Inter\",\"Noto Sans SC\",system-ui,sans-serif; font-size:.9rem; font-weight:800; text-decoration:none; transition:transform 220ms ease,background 220ms ease; } .ds-btn-primary svg { width:18px; } .ds-btn-primary:hover { transform:translateY(-2px); background:var(--skyway-yellow-hover,#e5c50c); } .ds-btn-primary:active { transform:translateY(0); } .ds-btn-primary:focus-visible { outline:3px solid var(--skyway-yellow,#ffde17); outline-offset:4px; }"
     },
     {
-      "name": "Editorial Quote",
+      "name": "Quiet Hero Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "与主按钮并列的次级人物介绍入口，以低透明玻璃保持可读而不争夺层级。",
+      "html": "<a class=\"ds-btn-quiet\" href=\"#\">认识我</a>",
+      "css": ".ds-btn-quiet { display:inline-flex; min-height:52px; align-items:center; justify-content:center; padding:0 22px; border:1px solid rgba(255,255,255,.2); border-radius:8px; background:rgba(255,255,255,.07); backdrop-filter:blur(8px); color:var(--skyway-white,#f5f5f7); font-family:\"Inter\",\"Noto Sans SC\",system-ui,sans-serif; font-size:.9rem; font-weight:800; text-decoration:none; transition:transform 220ms ease,background 220ms ease; } .ds-btn-quiet:hover { transform:translateY(-2px); background:rgba(255,255,255,.12); } .ds-btn-quiet:active { transform:translateY(0); } .ds-btn-quiet:focus-visible { outline:3px solid var(--skyway-yellow,#ffde17); outline-offset:4px; }"
+    },
+    {
+      "name": "Reading Route Module",
       "kind": "custom",
-      "description": "长文中的无容器引用，以单个中文开引号建立层级。",
-      "html": "<blockquote class=\"ds-quote\">先把事情做出来，再把为什么写清楚。</blockquote>",
-      "css": ".ds-quote { position:relative; margin:2.8rem 0; padding:.35rem 0 .35rem 2.8rem; color:var(--muted,#6f6b62); font-family:\"Noto Sans SC\",\"Microsoft YaHei\",\"PingFang SC\",system-ui,sans-serif; font-size:1.4rem; line-height:1.65; } .ds-quote::before { content:\"“\"; position:absolute; top:-.25rem; left:0; color:var(--teal,#227a73); font-size:3.4rem; font-weight:650; line-height:1; }"
+      "refersTo": "reading-route",
+      "description": "压在英雄区末端的白色阅读导航，把航空隐喻转化为真实文章入口。",
+      "html": "<section class=\"ds-route\"><div class=\"ds-route-tabs\"><strong>从最新开始</strong><span>浏览全部</span></div><div class=\"ds-route-fields\"><div><small>当前位置</small><b>此刻</b></div><button aria-label=\"交换阅读起点与目的地\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"m17 1 4 4-4 4M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4m14-2v2a4 4 0 0 1-4 4H3\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button><div><small>目的地</small><b>一篇真实文章</b></div><a href=\"#\">开始阅读 →</a></div></section>",
+      "css": ".ds-route { padding:24px 28px 28px; border-radius:12px; background:#fff; box-shadow:0 18px 56px rgba(0,10,28,.28); color:var(--skyway-navy,#001b48); font-family:\"Inter\",\"Noto Sans SC\",system-ui,sans-serif; } .ds-route-tabs { display:flex; gap:24px; margin-bottom:18px; color:#54718a; font-size:.78rem; font-weight:700; } .ds-route-tabs strong { color:var(--skyway-navy,#001b48); } .ds-route-fields { display:grid; grid-template-columns:1fr auto 1fr auto; align-items:center; } .ds-route-fields>div { padding:2px 22px; border-right:1px solid #dbe3eb; } .ds-route-fields>div:first-child { padding-left:0; } .ds-route small,.ds-route b { display:block; } .ds-route small { margin-bottom:3px; color:#71889c; font-size:.7rem; font-weight:400; } .ds-route b { font-size:.96rem; } .ds-route button { display:grid; width:38px; height:38px; margin:0 -1px; place-items:center; border:1px solid #d6e0e8; border-radius:50%; background:#fff; color:var(--skyway-surface,#02457a); transition:transform 220ms ease,background 220ms ease; } .ds-route button svg { width:17px; } .ds-route button:hover { transform:rotate(180deg); background:#edf5fa; } .ds-route a { display:inline-flex; min-height:54px; align-items:center; padding:0 23px; border-radius:8px; background:var(--skyway-amber,#ffb300); color:var(--skyway-navy,#001b48); font-size:.84rem; font-weight:800; text-decoration:none; transition:transform 220ms ease,background 220ms ease; } .ds-route a:hover { transform:translateY(-2px); background:var(--skyway-yellow,#ffde17); } .ds-route button:focus-visible,.ds-route a:focus-visible { outline:3px solid var(--skyway-yellow,#ffde17); outline-offset:4px; }"
+    },
+    {
+      "name": "Destination Card",
+      "kind": "card",
+      "refersTo": "destination-card",
+      "description": "横向滚动的高幅目的地卡，以深蓝表面、图像渐变和右上箭头组织探索入口。",
+      "html": "<a class=\"ds-destination\" href=\"#\"><span class=\"ds-destination-shade\"></span><small>最新文章</small><div><h3>从这里开始</h3><p>沿时间线浏览真实写作与学习记录。</p></div><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-destination { position:relative; display:flex; width:min(390px,80vw); height:440px; flex-direction:column; justify-content:space-between; overflow:hidden; padding:30px; border-radius:14px; background:var(--skyway-surface,#02457a); color:#fff; font-family:\"Inter\",\"Noto Sans SC\",system-ui,sans-serif; text-decoration:none; isolation:isolate; } .ds-destination::before { content:\"\"; position:absolute; z-index:-1; inset:0; background:linear-gradient(145deg,rgba(255,255,255,.12),transparent 48%); } .ds-destination-shade { position:absolute; z-index:-1; inset:0; background:linear-gradient(180deg,rgba(0,19,49,.1),rgba(0,13,35,.92)); } .ds-destination small { font-size:.7rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; } .ds-destination h3 { margin:0 0 12px; font-size:clamp(1.55rem,2.4vw,2.1rem); line-height:1.12; letter-spacing:-.025em; } .ds-destination p { margin:0; color:rgba(245,245,247,.76); font-size:.88rem; } .ds-destination>svg { position:absolute; top:26px; right:26px; width:20px; transition:transform 240ms ease; } .ds-destination:hover>svg { transform:translate(4px,-4px); } .ds-destination:focus-visible { outline:3px solid var(--skyway-yellow,#ffde17); outline-offset:4px; }"
+    },
+    {
+      "name": "Circular Carousel Control",
+      "kind": "button",
+      "refersTo": "circular-control",
+      "description": "目的地轨道的白色圆形方向控件，悬浮时切换为信号黄。",
+      "html": "<button class=\"ds-circle-control\" aria-label=\"下一组\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14m-6-6 6 6-6 6\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>",
+      "css": ".ds-circle-control { display:grid; width:46px; height:46px; place-items:center; border:0; border-radius:50%; background:#fff; color:var(--skyway-navy,#001b48); transition:transform 220ms ease,background 220ms ease; } .ds-circle-control svg { width:20px; } .ds-circle-control:hover { transform:translateY(-2px); background:var(--skyway-yellow,#ffde17); } .ds-circle-control:active { transform:translateY(0); } .ds-circle-control:focus-visible { outline:3px solid var(--skyway-yellow,#ffde17); outline-offset:4px; }"
+    },
+    {
+      "name": "Latest Article Manifest",
+      "kind": "card",
+      "description": "旅程段落中的最新文章面板，以航行蓝表面承接编辑引语。",
+      "html": "<a class=\"ds-manifest\" href=\"#\"><span>最新记录</span><div><time>2026.09.03</time><h3>从这里开始</h3><p>欢迎来到我的个人博客。这里记录技术、学习与真实思考。</p></div><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-manifest { position:relative; display:grid; width:min(480px,100%); min-height:470px; align-content:space-between; padding:40px; border:1px solid var(--skyway-line,rgba(255,255,255,.12)); border-radius:14px; background:var(--skyway-surface,#02457a); color:#fff; font-family:\"Inter\",\"Noto Sans SC\",system-ui,sans-serif; text-decoration:none; transition:transform 260ms ease,background 260ms ease; } .ds-manifest:hover { transform:translateY(-8px); background:#07528e; } .ds-manifest>span { color:var(--skyway-yellow,#ffde17); font-size:.72rem; font-weight:800; letter-spacing:.08em; } .ds-manifest time { color:var(--skyway-muted,#9bb1c4); font-size:.76rem; } .ds-manifest h3 { margin:12px 0; font-size:2rem; } .ds-manifest p { max-width:50ch; margin:0; color:rgba(245,245,247,.75); } .ds-manifest>svg { position:absolute; top:34px; right:34px; width:22px; } .ds-manifest:focus-visible { outline:3px solid var(--skyway-yellow,#ffde17); outline-offset:4px; }"
+    },
+    {
+      "name": "Magnetic Reading CTA",
+      "kind": "button",
+      "refersTo": "magnetic-cta",
+      "description": "浅色联系收束中的大型圆形动作；运行时由 GSAP 在指针区域内磁吸跟随。",
+      "html": "<a class=\"ds-magnetic\" href=\"#\"><span>开始阅读</span><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M7 17 17 7M7 7h10v10\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a>",
+      "css": ".ds-magnetic { display:flex; width:180px; height:180px; flex-direction:column; align-items:center; justify-content:center; gap:10px; border-radius:50%; background:var(--skyway-yellow,#ffde17); box-shadow:0 18px 45px rgba(188,154,0,.24); color:var(--skyway-navy,#001b48); font-family:\"Inter\",\"Noto Sans SC\",system-ui,sans-serif; font-weight:800; text-decoration:none; transition:background 220ms ease,transform 220ms ease; } .ds-magnetic svg { width:23px; } .ds-magnetic:hover { background:var(--skyway-yellow-hover,#e5c50c); transform:translateY(-3px); } .ds-magnetic:active { transform:translateY(0); } .ds-magnetic:focus-visible { outline:3px solid var(--skyway-yellow,#ffde17); outline-offset:4px; }"
     }
   ],
   "narrative": {
-    "northStar": "公开学习札记",
-    "overview": "这是一个安静、诚实的个人出版空间：访客先认识章思哲，再顺着清晰的文章入口开始阅读。视觉像一张被认真排版的暖色数字纸张，用排版、留白和细线建立秩序，不用口号式英雄区、卡片墙或装饰性隐喻争夺注意力。\n\n系统保持适度的编辑感，但中文可读性优先。深墨承担内容，深青绿指向可行动与当前状态，氧化红只做类别和身份标记；真实头像是唯一主要图像。",
+    "northStar": "思想航线 / The Thinking Skyway",
+    "overview": "这个系统把个人博客塑造成一段可探索的思想航线：深海军蓝构成夜航般的连续世界，山峰、云海与机舱窗口带来电影感纵深，鲜明黄色把阅读入口变成清晰信号。航空只是一种关于探索、坐标与前往下一站的视觉语言；内容始终忠于章思哲本人、真实文章和公开联系方式。\n\n体验在沉浸与可读之间保持明确秩序。首页以全屏影像和固定玻璃导航建立氛围，但文章入口仍在首屏可见；白色阅读路线模块穿出深色场景，随后以横向目的地、非对称内容网格、真实头像、数据带、编辑引语和浅色联系收束引导访客继续阅读。成品评审的全部实质问题已解决，当前视觉世界可作为后续页面的正式权威。",
     "keyCharacteristics": [
-      "暖纸底色与深墨文字贯穿整页。",
-      "单一中文无衬线字体栈，靠字号、字重与留白建立层级。",
-      "发丝细分隔线、直角轮廓和排版式文章行取代卡片。",
-      "氧化红与深青绿稀疏出现，各自承担明确语义。",
-      "动效轻、短且可关闭，不改变内容阅读顺序。"
+      "深海军蓝连续画布、电影化山峰影像与机舱窗口共同建立“航线”世界。",
+      "信号黄专门标示主要行动、焦点和关键状态；琥珀色只用于阅读路线的出发动作。",
+      "Inter 承担清晰、现代的中文界面与大标题，Playfair Display 只作为稀疏的编辑性强调。",
+      "宽屏容器、大片留白、横向目的地卡与非对称编辑网格形成桌面优先的节奏。",
+      "12px / 14px 曲面与圆形控件构成稳定形态语言，不把页面变成同质卡片墙。",
+      "动效服务于“穿越、前往、继续探索”，且减少动态模式直接呈现可读终态。"
     ],
     "rules": [
-      { "name": "The Two-Ink Rule", "body": "深青绿只表示阅读路径或当前状态，氧化红只表示身份与编辑标签；两者都不铺成大面积背景。", "section": "colors" },
-      { "name": "The One-Paper Rule", "body": "页面保持一张连续暖纸，不用白色卡片或交替色块切碎阅读流。", "section": "colors" },
-      { "name": "The One-Family Rule", "body": "不引入展示性衬线体、等宽体或手写体；层级只通过同一中文无衬线家族的尺度、字重、行距与颜色建立。", "section": "typography" },
-      { "name": "The Reading-First Grid Rule", "body": "每个区块都必须沿 DOM 阅读顺序自然成立；网格只增强层级，不能依赖视觉换序解释内容。", "section": "layout" },
-      { "name": "The Flat-by-Default Rule", "body": "不为导航、文章入口、联系方式或正文添加阴影、玻璃模糊与浮层质感。", "section": "elevation" }
+      {
+        "name": "The Signal, Not Paint Rule",
+        "body": "信号黄只用于行动、焦点和少数关键强调；不要把它铺成大面积背景或用于普通说明文字。",
+        "section": "colors"
+      },
+      {
+        "name": "The One Night Sky Rule",
+        "body": "首页从英雄区到编辑内容保持一块连续深海军蓝画布；只有阅读路线模块和联系收束允许以浅色面主动穿出。",
+        "section": "colors"
+      },
+      {
+        "name": "The Amber Departure Rule",
+        "body": "琥珀色只标记阅读路线模块中的“出发”动作，不与全局信号黄争夺主层级。",
+        "section": "colors"
+      },
+      {
+        "name": "The Editorial Accent Rule",
+        "body": "Playfair Display 只用于独立的编辑性短句，不用于导航、按钮、元数据或中文长正文。",
+        "section": "typography"
+      },
+      {
+        "name": "The Bold Horizon Rule",
+        "body": "大标题用粗重字重、紧字距和短行建立地平线般的力量；不要用描边、渐变字或多余字体效果制造层级。",
+        "section": "typography"
+      },
+      {
+        "name": "The Visible Reading Route Rule",
+        "body": "无论画面多沉浸，真实文章入口必须在首屏内或首屏末端清晰露出，不能让访客先穿过纯装饰性序幕。",
+        "section": "layout"
+      },
+      {
+        "name": "The Editorial Asymmetry Rule",
+        "body": "桌面用跨行、偏重列和横向滚动创造节奏；移动端按语义顺序收成单列，不维持会压缩文字的桌面构图。",
+        "section": "layout"
+      },
+      {
+        "name": "The Lift Only at Crossings Rule",
+        "body": "阴影只出现在跨越复杂影像、重叠两个区段或需要独立操控的元素上；普通文章与信息网格保持平面。",
+        "section": "elevation"
+      },
+      {
+        "name": "The Surface-or-Control Rule",
+        "body": "12px / 14px 用于承载内容的表面，8px 用于按钮，完整圆形用于单一动作；不要随意混用曲率或给每段文字加圆角底板。",
+        "section": "shapes"
+      }
     ],
     "dos": [
-      "Do 先呈现真实作者身份，再给出首屏可见的文章入口。",
-      "Do 把暖纸、深墨、发丝线和大量留白当作主要视觉材料。",
-      "Do 保持每个强调色的语义稳定，并为键盘、触摸与减少动态场景提供完整体验。",
-      "Do 只展示真实文章、头像、联系方式和可验证内容。"
+      "Do 用深海军蓝、航行蓝、冷白和稀疏信号色维持统一的夜航世界。",
+      "Do 让作者身份、真实文章入口和可验证联系方式始终优先于航空装饰。",
+      "Do 在桌面使用宽容器、横向卡片和非对称构图，在 1024px / 768px 断点按语义顺序重排。",
+      "Do 把 Playfair Display 限制在少量编辑强调，把中文正文与操作保持为清晰的 Inter / Noto Sans SC。",
+      "Do 为视频、滚动穿越、视差和磁吸提供完整的减少动态终态，并保留明显键盘焦点。",
+      "Do 让影像与动画引导访客前往内容，而不是挡住内容。"
     ],
     "donts": [
-      "Don't 使用卡片墙、渐变、玻璃拟态、投影、圆角容器或大面积强调色。",
-      "Don't 使用口号式全屏英雄区、胶片隐喻、复古胶片配色或装饰性视觉叙事。",
-      "Don't 混用多套字体、把中文压得过紧，或让装饰阻挡文章阅读入口。",
-      "Don't 伪造项目、履历、统计数字、推荐语或更多文章来填满版面。"
+      "Don't 恢复 AstroPaper 的居中等宽阅读栏、双主题橙蓝系统或纯文本列表视觉。",
+      "Don't 把航空语言变成虚构订票、机组、航班、项目成果、评价或影响力数据。",
+      "Don't 用大面积黄色、任意渐变字、过多玻璃面或随处投影削弱深蓝世界的克制感。",
+      "Don't 把所有内容做成相同尺寸、相同圆角、相同阴影的卡片墙。",
+      "Don't 在移动端强保留桌面双栏和跨行构图，或隐藏首屏真实阅读入口。",
+      "Don't 让动效成为理解导航、阅读路径或内容状态的唯一方式。"
     ]
   }
 }
